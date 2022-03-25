@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Roboto:wght@300;700&display=swap');
+$font:'Rajdhani',
+sans-serif;
+$orang:#EC4F48;
+// $pink:#E703BD;
+$pink:#d35ab7;
+$light:#EAEAEA;
+// $blue :#24292e;
+// $blue :#000000;
+$blue :#0b1018;
+$lite-color:#020c1898;
+body {
+    font-family: $font;
+    color: $light;
+    background-color: $blue;
+    ;
+}
+
+:root {
+    scroll-behavior: unset;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}

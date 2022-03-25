@@ -1,0 +1,74 @@
+    @import "../../styles.scss";
+    .navbar-toggler {
+        color: $light;
+    }
+    
+    .navbar-brand {
+        // color: $orang;
+        cursor: pointer;
+        animation: moveIcon 4s infinite ease-in-out;
+        position: relative;
+    }
+    
+    @keyframes moveIcon {
+        0% {
+            left: -10%;
+            opacity: 0
+        }
+        80% {
+            left: 0;
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    // .navbar-brand:hover {
+    //     color: $orang;
+    // }
+    .navbar-toggler :hover {
+        color: $orang;
+        transition: color .5s;
+    }
+    
+    .navbar {
+        background-color: $lite-color !important;
+        z-index: 9999;
+    }
+    
+    .btn {
+        background-color: $orang;
+        color: $light;
+    }
+    
+    .nav-link {
+        color: $light !important;
+        cursor: pointer;
+        transition: color .5s;
+    }
+    
+    .nav-link:hover {
+        color: $orang !important;
+    }
+    
+    .active {
+        color: $orang !important;
+    }
+    
+    @media screen and (max-width: 1060px)and (min-width: 992px) {
+        .collapse,
+        .btn {
+            font-size: 12px;
+        }
+    }
+    
+    @media screen and (max-width:992px) {
+        .btn {
+            font-size: 12px;
+        }
+    }

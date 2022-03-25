@@ -1,0 +1,61 @@
+<section class="py-5 my-5">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 py-3">
+                <div class="position-relative">
+                    <img class="img-fluid" src="assets/imgs/Group 28.png" alt="token">
+                    <img class="icon" src="assets/imgs/income.png" alt="income">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class=" position-relative">
+                    <small class="token position-relative ps-2">TOKEN SALE</small>
+                    <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector">
+                </div>
+                <h3>Token Allocation Summary
+                </h3>
+                <p class="position-relative pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus...
+                </p>
+                <div class="token-skills">
+                    <div class="d-flex">
+                        <p class="token-skills-80 mb-2">Post-UTO Community Reserve - 15.000.00</p>
+                        <p [ngClass]="{'token-skills-p' : scrolling}" class="token-skills-p mb-2 fw-bold opacity-0">80</p>
+                    </div>
+                    <div class="progress">
+                        <div [ngClass]="{'progress1' : scrolling}" (scroll)="onScroll($event,'')" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <p class="token-skills-75 mb-2">Token Offer - 70.000.00
+                        </p>
+                        <p [ngClass]="{'token-skills-p' : scrolling}" class="token-skills-p mb-2 fw-bold opacity-0">75</p>
+                    </div>
+                    <div class="progress">
+                        <div [ngClass]="{'progress2' : scrolling}" (scroll)="onScroll($event,'#token')" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <p class="token-skills-65 mb-2">UTO Bounties - 15.500.00
+                        </p>
+                        <p [ngClass]="{'token-skills-p' : scrolling}" class="token-skills-p mb-2 fw-bold opacity-0">65</p>
+                    </div>
+                    <div class="progress">
+                        <div [ngClass]="{'progress3' : scrolling}" (scroll)="onScroll($event,'#token')" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <p class="token-skills-70 mb-2">Post-UTO Community Building - 18.000.0</p>
+                        <p [ngClass]="{'token-skills-p' : scrolling}" class="token-skills-p mb-2 fw-bold opacity-0">70</p>
+                    </div>
+                    <div class="progress">
+                        <div [ngClass]="{'progress4' : scrolling}" (scroll)="onScroll($event,'#token')" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                    </div>
+
+                </div>
+
+                <a class="btn btn-outline-light border-0 mt-5" type="submit">VIEW DETAILS</a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

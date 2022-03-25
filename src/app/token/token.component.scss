@@ -1,0 +1,124 @@
+@import "../../styles.scss";
+section {
+    background-image: url('../../assets/imgs/Frame2.png');
+}
+
+.token::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: $orang;
+    left: 0;
+    top: 0;
+}
+
+.vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h3 {
+    color: $pink;
+}
+
+.token-skills-80 {
+    width: 75%;
+    font-size: 14px;
+    color: $light;
+    font-weight: 600;
+}
+
+.token-skills-75 {
+    width: 70%;
+    font-size: 14px;
+    color: $light;
+    font-weight: 600;
+}
+
+.token-skills-65 {
+    width: 60%;
+    font-size: 14px;
+    color: $light;
+    font-weight: 600;
+}
+
+.token-skills-70 {
+    width: 65%;
+    font-size: 14px;
+    color: $light;
+    font-weight: 600;
+}
+
+.token-skills-p {
+    font-size: 14px;
+    font-weight: 500;
+    color: $orang;
+    opacity: 1 !important;
+    transition: opacity 3s;
+}
+
+.progress {
+    height: .25rem;
+}
+
+.progress-bar {
+    background-color: $orang;
+}
+
+.btn {
+    background-color: $orang;
+    color: $light;
+}
+
+.progress1 {
+    width: 80% !important;
+    transition: width 3s;
+}
+
+.progress2 {
+    width: 75% !important;
+    transition: width 3s;
+}
+
+.progress3 {
+    width: 65% !important;
+    transition: width 3s;
+}
+
+.progress4 {
+    width: 70% !important;
+    transition: width 3s;
+}
+
+.icon {
+    width: 100px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translateX(-50%);
+    animation: move 2s infinite ease-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    90% {
+        transform: translateX(-50%) translatey(-70%);
+        opacity: 1
+    }
+    100% {
+        transform: translateX(-50%) translatey(-70%);
+        opacity: 0
+    }
+}
+
+@media screen and (max-width:992px)and(min-width:768px) {
+    .icon {
+        width: 50px;
+    }
+}
