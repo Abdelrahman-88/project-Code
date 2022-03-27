@@ -27,3 +27,946 @@
         border-radius: 50%;
         padding: 2px 1px;
     }
+    
+    .icon1 {
+        width: 10%;
+        position: absolute;
+        left: 19%;
+        top: 35%;
+        animation: icon 4s infinite ease-out;
+    }
+    
+    .icon5 {
+        width: 10%;
+        position: absolute;
+        left: 19%;
+        top: 35%;
+        animation: icon02 4s infinite ease-out;
+    }
+    
+    .icon2 {
+        width: 10%;
+        position: absolute;
+        right: 19%;
+        top: 35%;
+        animation: icon 4s infinite ease-out;
+    }
+    
+    .icon6 {
+        width: 10%;
+        position: absolute;
+        right: 19%;
+        top: 35%;
+        animation: icon02 4s infinite ease-out;
+    }
+    
+    .icon3 {
+        width: 10%;
+        position: absolute;
+        left: 19%;
+        top: 65%;
+        animation: icon 4s infinite ease-out;
+    }
+    
+    .icon7 {
+        width: 10%;
+        position: absolute;
+        left: 19%;
+        top: 65%;
+        animation: icon02 4s infinite ease-out;
+    }
+    
+    .icon4 {
+        width: 10%;
+        position: absolute;
+        right: 19%;
+        top: 65%;
+        animation: icon 4s infinite ease-out;
+    }
+    
+    .icon8 {
+        width: 10%;
+        position: absolute;
+        right: 19%;
+        top: 65%;
+        animation: icon02 4s infinite ease-out;
+    }
+    
+    @keyframes icon {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            transform: translatey(-70%);
+            opacity: 1;
+        }
+        50% {
+            transform: translatey(-70%);
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @keyframes icon02 {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            transform: translatey(0);
+            opacity: 0;
+        }
+        90% {
+            transform: translatey(-70%);
+            opacity: 1;
+        }
+        100% {
+            transform: translatey(-70%);
+            opacity: 0;
+        }
+    }
+    
+    // .icon1 {
+    //     width: 22%;
+    //     position: absolute;
+    //     top: 70%;
+    //     left: 48%;
+    //     z-index: 1;
+    //     transform: translateX(-50%) translateY(-50%);
+    //     animation: icon1 20s infinite ease-out;
+    // }
+    // @keyframes icon1 {
+    //     0% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     20% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     25% {
+    //         opacity: .5;
+    //         left: 26%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     45% {
+    //         opacity: .5;
+    //         left: 26%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     50% {
+    //         opacity: .3;
+    //         left: 48%;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     70% {
+    //         opacity: .3;
+    //         left: 48%;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     75% {
+    //         opacity: .5;
+    //         left: 68%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     95% {
+    //         opacity: .5;
+    //         left: 68%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     100% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    // }
+    // .icon2 {
+    //     width: 12%;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 26%;
+    //     opacity: .5;
+    //     z-index: -1;
+    //     transform: translateX(-50%) translateY(-50%);
+    //     animation: icon2 20s infinite ease-out;
+    // }
+    // @keyframes icon2 {
+    //     0% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     20% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     25% {
+    //         opacity: .3;
+    //         left: 48%;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     45% {
+    //         opacity: .3;
+    //         left: 48%;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     50% {
+    //         opacity: .5;
+    //         left: 68%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     70% {
+    //         opacity: .5;
+    //         left: 68%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     75% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     95% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     100% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    // }
+    // .icon3 {
+    //     width: 7%;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 48%;
+    //     z-index: -1;
+    //     opacity: .3;
+    //     transform: translateX(-50%) translateY(-50%);
+    //     animation: icon3 20s infinite ease-out;
+    // }
+    // @keyframes icon3 {
+    //     0% {
+    //         left: 48%;
+    //         opacity: .3;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     20% {
+    //         left: 48%;
+    //         opacity: .3;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     25% {
+    //         opacity: .5;
+    //         left: 68%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     45% {
+    //         opacity: .5;
+    //         left: 68%;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     50% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     70% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     75% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     95% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     100% {
+    //         left: 48%;
+    //         opacity: .3;
+    //         width: 7%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    // }
+    // .icon4 {
+    //     width: 12%;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 68%;
+    //     z-index: -1;
+    //     opacity: .5;
+    //     transform: translateX(-50%) translateY(-50%);
+    //     animation: icon4 20s infinite ease-out;
+    // }
+    // @keyframes icon4 {
+    //     0% {
+    //         left: 68%;
+    //         opacity: .5;
+    //         z-index: -1;
+    //         width: 12%;
+    //         top: 50%;
+    //     }
+    //     20% {
+    //         left: 68%;
+    //         opacity: .5;
+    //         z-index: -1;
+    //         width: 12%;
+    //         top: 50%;
+    //     }
+    //     25% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     45% {
+    //         opacity: 1;
+    //         left: 48%;
+    //         width: 22%;
+    //         z-index: 1;
+    //         top: 70%;
+    //     }
+    //     50% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     70% {
+    //         left: 26%;
+    //         opacity: .5;
+    //         width: 12%;
+    //         z-index: -1;
+    //         top: 50%;
+    //     }
+    //     75% {
+    //         left: 48%;
+    //         opacity: .3;
+    //         z-index: -1;
+    //         width: 7%;
+    //         top: 50%;
+    //     }
+    //     95% {
+    //         left: 48%;
+    //         opacity: .3;
+    //         z-index: -1;
+    //         width: 7%;
+    //         top: 50%;
+    //     }
+    //     100% {
+    //         left: 68%;
+    //         opacity: .5;
+    //         z-index: -1;
+    //         width: 12%;
+    //         top: 50%;
+    //     }
+    // }
+    .marketing,
+    .design,
+    .cenima,
+    .media {
+        width: 100px;
+    }
+    
+    .item1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        animation: item1 20s infinite ease-in-out;
+    }
+    
+    @keyframes item1 {
+        0% {
+            opacity: 1;
+        }
+        10% {
+            opacity: 1;
+        }
+        15% {
+            opacity: 0;
+        }
+        95% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .item2 {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        animation: item2 20s infinite ease-in-out;
+        position: absolute;
+    }
+    
+    @keyframes item2 {
+        0% {
+            opacity: 0;
+        }
+        10% {
+            opacity: 0;
+        }
+        15% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 1;
+        }
+        30% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .item3 {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        animation: item3 20s infinite ease-in-out;
+        position: absolute;
+    }
+    
+    @keyframes item3 {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        40% {
+            opacity: 1;
+        }
+        45% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .item4 {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        animation: item4 20s infinite ease-in-out;
+        position: absolute;
+    }
+    
+    @keyframes item4 {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        45% {
+            opacity: 1;
+        }
+        55% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .item5 {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        animation: item5 20s infinite ease-in-out;
+        position: absolute;
+    }
+    
+    @keyframes item5 {
+        0% {
+            opacity: 0;
+        }
+        55% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 1;
+        }
+        70% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .item6 {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        animation: item6 20s infinite ease-in-out;
+        position: absolute;
+    }
+    
+    @keyframes item6 {
+        0% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 1;
+        }
+        85% {
+            opacity: 1;
+        }
+        95% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    // .item4 {
+    //     opacity: 0;
+    //     top: 0;
+    //     left: 0;
+    //     animation: item4 20s infinite ease-in-out;
+    //     position: absolute;
+    // }
+    // @keyframes item4 {
+    //     0% {
+    //         opacity: 0;
+    //     }
+    //     40% {
+    //         opacity: 0;
+    //     }
+    //     45% {
+    //         opacity: 1;
+    //     }
+    //     55% {
+    //         opacity: 1;
+    //     }
+    //     60% {
+    //         opacity: 0;
+    //     }
+    //     100% {
+    //         opacity: 0;
+    //     }
+    // }
+    // .item4 {
+    //     opacity: 0;
+    //     top: 0;
+    //     left: 0;
+    //     animation: item4 20s infinite ease-in-out;
+    //     position: absolute;
+    // }
+    // @keyframes item4 {
+    //     0% {
+    //         opacity: 0;
+    //     }
+    //     40% {
+    //         opacity: 0;
+    //     }
+    //     45% {
+    //         opacity: 1;
+    //     }
+    //     55% {
+    //         opacity: 1;
+    //     }
+    //     60% {
+    //         opacity: 0;
+    //     }
+    //     100% {
+    //         opacity: 0;
+    //     }
+    // }
+    .logo {
+        width: 15%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: logo 3s infinite ease-in-out;
+    }
+    
+    @keyframes logo {
+        0% {
+            transform: translateX(-50%);
+        }
+        50% {
+            transform: translateX(-50%) translatey(-150%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    
+    // @media screen and (max-width:1400px) {
+    //     .logo {
+    //         left: 50%;
+    //     }
+    //     @keyframes logo {
+    //         0% {
+    //             transform: translateX(-50%);
+    //             opacity: 0;
+    //         }
+    //         90% {
+    //             transform: translateX(-50%) translatey(-80%);
+    //             opacity: 1;
+    //         }
+    //         100% {
+    //             transform: translateX(-50%) translatey(-80%);
+    //             opacity: 0;
+    //         }
+    //     }
+    //     .icon1 {
+    //         left: 52%;
+    //     }
+    //     @keyframes icon1 {
+    //         0% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         20% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         25% {
+    //             opacity: .5;
+    //             left: 28%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         45% {
+    //             opacity: .5;
+    //             left: 28%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         50% {
+    //             opacity: .3;
+    //             left: 52%;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         70% {
+    //             opacity: .3;
+    //             left: 52%;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         75% {
+    //             opacity: .5;
+    //             left: 74%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         95% {
+    //             opacity: .5;
+    //             left: 74%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         100% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //     }
+    //     .icon2 {
+    //         left: 28%;
+    //     }
+    //     @keyframes icon2 {
+    //         0% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         20% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         25% {
+    //             opacity: .3;
+    //             left: 52%;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         45% {
+    //             opacity: .3;
+    //             left: 52%;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         50% {
+    //             opacity: .5;
+    //             left: 74%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         70% {
+    //             opacity: .5;
+    //             left: 74%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         75% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         95% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         100% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //     }
+    //     .icon3 {
+    //         left: 52%;
+    //     }
+    //     @keyframes icon3 {
+    //         0% {
+    //             left: 52%;
+    //             opacity: .3;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         20% {
+    //             left: 52%;
+    //             opacity: .3;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         25% {
+    //             opacity: .5;
+    //             left: 74%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         45% {
+    //             opacity: .5;
+    //             left: 74%;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         50% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         70% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         75% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         95% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         100% {
+    //             left: 52%;
+    //             opacity: .3;
+    //             width: 7%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //     }
+    //     .icon4 {
+    //         left: 74%;
+    //     }
+    //     @keyframes icon4 {
+    //         0% {
+    //             left: 74%;
+    //             opacity: .5;
+    //             z-index: -1;
+    //             width: 12%;
+    //             top: 50%;
+    //         }
+    //         20% {
+    //             left: 74%;
+    //             opacity: .5;
+    //             z-index: -1;
+    //             width: 12%;
+    //             top: 50%;
+    //         }
+    //         25% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         45% {
+    //             opacity: 1;
+    //             left: 52%;
+    //             width: 22%;
+    //             z-index: 1;
+    //             top: 70%;
+    //         }
+    //         50% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         70% {
+    //             left: 28%;
+    //             opacity: .5;
+    //             width: 12%;
+    //             z-index: -1;
+    //             top: 50%;
+    //         }
+    //         75% {
+    //             left: 52%;
+    //             opacity: .3;
+    //             z-index: -1;
+    //             width: 7%;
+    //             top: 50%;
+    //         }
+    //         95% {
+    //             left: 52%;
+    //             opacity: .3;
+    //             z-index: -1;
+    //             width: 7%;
+    //             top: 50%;
+    //         }
+    //         100% {
+    //             left: 74%;
+    //             opacity: .5;
+    //             z-index: -1;
+    //             width: 12%;
+    //             top: 50%;
+    //         }
+    //     }
+    // }

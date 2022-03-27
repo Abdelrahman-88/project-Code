@@ -34,7 +34,7 @@ export class PartnersComponent implements OnInit {
         items: 5
       },
       940: {
-        items: 5
+        items: 8
       }
     },
     nav: true

@@ -14,7 +14,7 @@ export class TokenComponent implements OnInit {
   }
 
   @HostListener('window:scroll', ['$event']) 
-onScroll(event:any,target:string) {
+onScroll() {
 
     const elementPosition = this.el.nativeElement.offsetTop;
     const elementHeight = this.el.nativeElement.clientHeight;

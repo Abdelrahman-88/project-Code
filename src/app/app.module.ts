@@ -14,6 +14,9 @@ import { ServiceComponent } from './service/service.component';
 import { PartnersComponent } from './partners/partners.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FooterComponent } from './footer/footer.component';
+import { ScrollSpyModule } from 'ngx-scrollspy';
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     ParticlesModule,
     AnimateOnScrollModule.forRoot(),
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ScrollSpyModule.forRoot()
     
 
   ],

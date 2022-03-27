@@ -94,10 +94,10 @@ h3 {
 }
 
 .icon {
-    width: 100px;
+    width: 10%;
     position: absolute;
     top: 20%;
-    left: 40%;
+    left: 41%;
     transform: translateX(-50%);
     animation: move 2s infinite ease-out;
 }
@@ -117,8 +117,8 @@ h3 {
     }
 }
 
-@media screen and (max-width:992px)and(min-width:768px) {
-    .icon {
-        width: 50px;
-    }
-}
+// @media screen and (max-width:992px)and(min-width:768px) {
+//     .icon {
+//         width: 50px;
+//     }
+// }

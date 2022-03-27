@@ -9,13 +9,12 @@
     top: 0;
 }
 
-.vector {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-}
-
+// .vector {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -2;
+// }
 h3,
 .fas {
     color: $pink;
@@ -25,16 +24,18 @@ h3,
     max-width: 500px;
 }
 
-.card {
+.item {
     // background-color: #302461 !important;
-    background-color: #462446 !important;
-    transition: transform .5s, opacity .5s;
+    background-color: rgba(255, 255, 255, 0.123);
+    transition: transform .5s, opacity .5s, background-color .5s;
     cursor: pointer;
+    border-radius: 8px;
 }
 
-.card:hover {
+.item:hover {
     transform: scale(.9);
     opacity: .8;
+    background-color: #462446;
 }
 
 .fa-arrow-circle-right {
@@ -42,7 +43,7 @@ h3,
     transition: color .5s;
 }
 
-.card:hover .fa-arrow-circle-right {
+.item:hover .fa-arrow-circle-right {
     color: $pink;
 }
 
@@ -62,67 +63,63 @@ h3,
     position: relative;
 }
 
-.icon::after {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 140px;
-    background-color: $light;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.icon1::after {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 140px;
-    background-color: $light;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.before::before {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: $pink;
-    bottom: -290%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.after::before {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: $pink;
-    top: -290%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-@media screen and(max-width:1400px)and(min-width:1200px) {
-    .icon::after {
-        height: 170px;
-        top: 100%;
-    }
-    .icon1::after {
-        height: 170px;
-        bottom: 100%;
-    }
-    .before::before {
-        bottom: -330%;
-    }
-    .after::before {
-        top: -330%;
-    }
-}
+// .icon::after {
+//     content: "";
+//     position: absolute;
+//     width: 4px;
+//     height: 140px;
+//     background-color: $light;
+//     top: 100%;
+//     left: 50%;
+//     transform: translateX(-50%);
+// }
+// .icon1::after {
+//     content: "";
+//     position: absolute;
+//     width: 4px;
+//     height: 140px;
+//     background-color: $light;
+//     bottom: 100%;
+//     left: 50%;
+//     transform: translateX(-50%);
+// }
+// .before::before {
+//     content: "";
+//     position: absolute;
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background-color: $pink;
+//     bottom: -290%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 2;
+// }
+// .after::before {
+//     content: "";
+//     position: absolute;
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background-color: $pink;
+//     top: -290%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 2;
+// }
+// @media screen and(max-width:1400px)and(min-width:1200px) {
+//     .icon::after {
+//         height: 170px;
+//         top: 100%;
+//     }
+//     .icon1::after {
+//         height: 170px;
+//         bottom: 100%;
+//     }
+//     .before::before {
+//         bottom: -330%;
+//     }
+//     .after::before {
+//         top: -330%;
+//     }
+// }

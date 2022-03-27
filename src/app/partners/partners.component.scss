@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 section {
-    background-image: url('../../assets/imgs/universe_0.jpg');
+    background-image: url('../../assets/imgs/digital-world-banner-background-remixed-from-public-domain-by-nasa\ 1.png');
     background-position: center center;
     background-size: cover;
 }
@@ -27,14 +27,13 @@ section {
     transform: translateX(-50%);
 }
 
-.vector {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%);
-}
-
+// .vector {
+//     position: absolute;
+//     top: -20px;
+//     left: 50%;
+//     z-index: 1;
+//     transform: translateX(-50%);
+// }
 h3,
 .fas {
     color: $pink;
