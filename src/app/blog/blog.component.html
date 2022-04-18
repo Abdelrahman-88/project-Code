@@ -1,4 +1,6 @@
-<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5 my-5">
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5 my-5 position-relative">
+    <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+
     <div class="container">
         <div class="text-center mb-5">
             <small *ngIf="language==='EN'" class="partner fs-4">Blog</small>

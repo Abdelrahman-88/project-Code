@@ -6,9 +6,9 @@
                     <div>
                         <!-- <h3 class="fw-bold">C9</h3> -->
                         <a class="navbar-brand"><img class="logo" src="assets/imgs/logo1-removebg-preview.png" alt="logo"></a>
-                        <img class="logo1" src="assets/imgs/c9-logo-removebg-preview.png" alt="logo">
-                        <!-- <p *ngIf="language==='EN'" class="mt-2">Let's create the brands for your business ?</p>
-                        <p *ngIf="language==='AR'" class="mt-2">لنقم بإنشاء العلامات التجارية لعملك؟</p> -->
+                        <!-- <img class="logo1" src="assets/imgs/c9-logo-removebg-preview.png" alt="logo"> -->
+                        <p *ngIf="language==='EN'" class="mt-2">INTEGRATED DEVELOPMENT ENVIRONMENT</p>
+                        <p *ngIf="language==='AR'" class="mt-2">بيئة تطوير متكاملة</p>
                         <!-- <p *ngIf="language==='EN'"><i class="fa-solid fa-location-dot me-2 fa-fw"></i>Al yasmeen, Riyadh, Kingdom of Saudi Arabia</p>
                         <p *ngIf="language==='AR'"><i class="fa-solid fa-location-dot ms-2 fa-fw"></i>الياسمين، الرياض، المملكة العربية السعودية</p>
                         <p *ngIf="language==='EN'"><i class="fa-solid fa-phone me-2 fa-fw"></i>920009710</p>
@@ -50,7 +50,7 @@
                                     <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">About</a>
                                     <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">معرفتنا</a>
 
-                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">Why Us</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold space" (click)="scrollToElement('#token',$event)">Why Us</a>
                                     <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">لماذا نحن</a>
 
                                     <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#service',$event)">Service</a>
@@ -58,14 +58,16 @@
 
                                 </div>
                                 <div>
-                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#contact',$event)">Contact</a>
-                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#contact',$event)">اتصل بنا</a>
-
                                     <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">Clients</a>
                                     <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">العملاء</a>
 
                                     <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#blog',$event)">Blog</a>
-                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#blog',$event)">المدونة</a></div>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#blog',$event)">المدونة</a>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#contact',$event)">Contact</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#contact',$event)">اتصل بنا</a>
+                                </div>
+
                             </div>
 
                         </div>
