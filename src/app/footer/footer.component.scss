@@ -1,64 +1,84 @@
-@import "../../styles.scss";
-// footer {
-//     background-image: url('../../assets/imgs/abstract-technology-big-data-concept\ 1.png');
-//     background-size: cover;
-//     background-position: center center;
-// }
-.icons {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    border-radius: 8px;
-}
-
-.bord {
-    background-color: $light;
-    margin: 5px;
-    border-radius: 4px;
-    transition: background-color .5s;
-    border: none;
-    cursor: pointer;
-}
-
-.bord:hover {
-    background-color: transparent;
-}
-
-.fa-brands {
-    color: $pink;
-    transition: color .5s;
-}
-
-.bord:hover .fa-brands {
-    color: $light;
-}
-
-// h3,
-// span {
-//     color: $orang
-// }
-.navbar-brand {
-    cursor: pointer;
-}
-
-.logo {
-    width: 50px;
-}
-
-.logo2 {
-    width: 25px;
-}
-
-.nav-link {
-    cursor: pointer;
-    color: $light;
-    transition: color .5s;
-}
-
-.nav-link:hover {
-    color: $orang !important
-}
-
-.active {
-    color: $orang
-}
+    @import "../../styles.scss";
+    // footer {
+    //     background-image: url('../../assets/imgs/abstract-technology-big-data-concept\ 1.png');
+    //     background-size: cover;
+    //     background-position: center center;
+    // }
+    .icons {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 8px;
+    }
+    
+    .bord {
+        background-color: $light;
+        margin: 5px;
+        border-radius: 4px;
+        transition: background-color .5s;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .bord:hover {
+        background-color: transparent;
+    }
+    
+    .fa-brands {
+        transition: color .5s;
+        color: $lite-blue;
+    }
+    
+    .bord:hover .fa-brands {
+        color: $light !important;
+    }
+    
+    .fa-solid,
+    h4 {
+        color: $lite-blue;
+    }
+    
+    // h3,
+    // span {
+    //     color: $orang
+    // }
+    .navbar-brand {
+        cursor: pointer;
+    }
+    
+    .logo {
+        width: 50px;
+    }
+    
+    .logo1 {
+        display: block;
+        width: 150px;
+    }
+    
+    .logo2 {
+        width: 25px;
+    }
+    
+    .nav-link {
+        cursor: pointer;
+        color: $light;
+        transition: color .5s;
+    }
+    
+    .nav-link:hover {
+        color: $lite-blue !important;
+    }
+    
+    .active {
+        color: $lite-blue;
+        color: rgb(245, 237, 237);
+    }
+    
+    @media screen and (max-width:375px) {
+        h4 {
+            font-size: 15px;
+        }
+        .nav-link {
+            font-size: 12px;
+        }
+    }

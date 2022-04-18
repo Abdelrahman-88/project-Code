@@ -1,23 +1,22 @@
 @import "../../styles.scss";
-.service::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    background-color: $orang;
-    left: 0;
-    top: 0;
-}
-
+// .service::after {
+//     content: "";
+//     position: absolute;
+//     width: 1px;
+//     height: 100%;
+//     background-color: $orang;
+//     left: 0;
+//     top: 0;
+// }
 // .vector {
 //     position: absolute;
 //     top: 0;
 //     left: 0;
 //     z-index: -2;
 // }
-h3,
-.fas {
-    color: $pink;
+section {
+    background-image: url('../../assets/imgs/Frame3.png');
+    background-position: center center;
 }
 
 .head {
@@ -27,15 +26,20 @@ h3,
 .item {
     // background-color: #302461 !important;
     background-color: rgba(255, 255, 255, 0.123);
-    transition: transform .5s, opacity .5s, background-color .5s;
+    // background-color: rgba(0, 0, 0, 0.3);
+    transition: transform .5s, opacity .5s, background-color .5s, color .5s;
     cursor: pointer;
     border-radius: 8px;
+    width: 100%;
+    min-height: 100px;
+    color: $light;
 }
 
 .item:hover {
-    transform: scale(.9);
-    opacity: .8;
-    background-color: #462446;
+    // transform: scale(.9);
+    // opacity: .8;
+    background-color: rgba(255, 255, 255, 0.282);
+    color: $lite-blue;
 }
 
 .fa-arrow-circle-right {
@@ -47,20 +51,23 @@ h3,
     color: $pink;
 }
 
+// h4 {
+//     color: $light;
+// }
 .icon {
     background-color: $light;
-    color: $pink;
     border-radius: 4px;
     height: fit-content;
     position: relative;
+    color: $lite-blue;
 }
 
 .icon1 {
     background-color: $light;
-    color: $pink;
     border-radius: 4px;
     height: fit-content;
     position: relative;
+    color: $lite-blue;
 }
 
 // .icon::after {
@@ -121,5 +128,10 @@ h3,
 //     }
 //     .after::before {
 //         top: -330%;
+//     }
+// }
+// @media screen and (max-width:1200px) {
+//     .item {
+//         min-height: auto;
 //     }
 // }

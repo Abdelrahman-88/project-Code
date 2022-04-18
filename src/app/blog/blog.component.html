@@ -1,0 +1,65 @@
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5 my-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <small *ngIf="language==='EN'" class="partner fs-4">Blog</small>
+            <small *ngIf="language==='AR'" class="partner fs-4">مدونة</small>
+
+            <h3 *ngIf="language==='EN'" class="my-2 fw-bold">Our latest news & Blog</h3>
+            <h3 *ngIf="language==='AR'" class="my-2 fw-bold">آخر الأخبار والمدونة</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="item shadow my-2">
+                    <div class="overflow-hidden item-img">
+                        <img class="w-100" src="assets/imgs/young-cheerful-programmer1.png" alt="programmer1">
+                    </div>
+                    <div *ngIf="language==='EN'" class="p-3">
+                        <h2 class="mt-3">Blog 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                    <div *ngIf="language==='AR'" class="p-3">
+                        <h2 class="mt-3">مدونة 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="btn">اقرأ أكثر</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item shadow my-2">
+                    <div class="overflow-hidden item-img">
+                        <img class="w-100" src="assets/imgs/young-cheerful-programmer2.png" alt="programmer2">
+                    </div>
+                    <div *ngIf="language==='EN'" class="p-3">
+                        <h2 class="mt-3">Blog 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                    <div *ngIf="language==='AR'" class="p-3">
+                        <h2 class="mt-3">مدونة 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="btn">اقرأ أكثر</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item shadow my-2">
+                    <div class="overflow-hidden item-img">
+                        <img class="w-100" src="assets/imgs/young-cheerful-programmer3.png" alt="programmer3">
+                    </div>
+                    <div *ngIf="language==='EN'" class="p-3">
+                        <h2 class="mt-3">Blog 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="btn">Read More</button>
+                    </div>
+                    <div *ngIf="language==='AR'" class="p-3">
+                        <h2 class="mt-3">مدونة 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <button class="btn">اقرأ أكثر</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+@import "../../styles.scss";
+h3 {
+    color: $lite-blue;
+}
+
+.btn {
+    color: $light;
+    background-color: $lite-blue !important;
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 0.123);
+    transition: transform .5s, background-color .5s, color .5s;
+    border-radius: 8px;
+}
+
+.item-img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.item img {
+    transition: transform .5s;
+}
+
+.item:hover {
+    transform: scale(.9);
+    background-color: rgba(255, 255, 255, 0.282);
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item:hover h2 {
+    color: $lite-blue;
+}

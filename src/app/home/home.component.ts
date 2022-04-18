@@ -1,18 +1,90 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { TranslateService } from './../translate.service';
+import { transition, trigger, style, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('fade', [      
+      transition('void => *', [
+        style({opacity: 0}),
+        animate(1000, style({opacity: 1}))
+      ]),
+      transition('* => void', [
+        animate(1000, style({opacity: 0}))
+      ])
+    ]),trigger('fadeOut', [      
+      transition('* => void', [
+        style({opacity: 1}),
+        animate(1000, style({opacity: 0}))
+      ])
+    ]),trigger('fadeOutIcon', [      
+      transition('* => void', [
+        style({opacity: 1}),
+        animate(1000, style({opacity: 0}))
+      ])
+    ])
+  
+  ]
 })
+
+
+
 export class HomeComponent implements OnInit {
   myStyle: object = {};
   myParams: any = {};
   width: number = 100;
   height: number = 100;
-  constructor() { }
+  item1:boolean=true;
+  item2:boolean=false;
+  item3:boolean=false;
+  timer:any;
+  language:string="EN";
+
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    autoplay:true,
+    autoplayHoverPause:true,
+    margin:0,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    rtl: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 3
+      },
+      400: {
+        items: 3
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
+  }
+
+  constructor(private _Router: Router,private _TranslateService:TranslateService) { 
+
+    
+  }
 
   ngOnInit(): void {
+    // this.translate.addLangs(['en', 'ar']);
+    // this.translate.setDefaultLang('en');
+    this._TranslateService.language.subscribe((res:any)=>{this.language=res})
+
     this.myStyle = {
       'position': 'absolute',
       'width': '100%',
@@ -27,14 +99,14 @@ export class HomeComponent implements OnInit {
     this.myParams = {
       "particles": {
         "number": {
-          "value": 80,
+          "value": 40,
           "density": {
             "enable": true,
             "value_area": 800
           }
         },
         "color": {
-          "value": "#ffdf4a"
+          "value": "#2f86e7"
         },
         "shape": {
           "type": "circle",
@@ -74,13 +146,13 @@ export class HomeComponent implements OnInit {
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#ffdf4a",
+          "color": "#2f86e7",
           "opacity": 0.4,
           "width": 1
         },
         "move": {
           "enable": true,
-          "speed": 6,
+          "speed": 3,
           "direction": "none",
           "random": false,
           "straight": false,
@@ -134,7 +206,39 @@ export class HomeComponent implements OnInit {
       },
       "retina_detect": true
     }
+    this.StartInterval("item1", 5000)
+  }
+
+  
+  change(term:string){
+    if (term=="item1") {
+      this.item3=false
+      this.item1=true
+      this.StartInterval("item2", 5000)
+
+    }else if (term=="item2") {
+      this.item1=false
+      this.item2=true
+      this.StartInterval("item3", 5000)
+
+    }else if(term=="item3") {
+      this.item2=false
+      this.item3=true
+      this.StartInterval("item1", 5000)
+
+    }
 
   }
+
+  StartInterval(index:string, frequency:number) {
+    this.timer=setTimeout(()=>{
+      this.change(index);
+    },frequency);
+  }
+
+  click(){
+    this._Router.navigate(['/special']);
+    }
+
 
 }

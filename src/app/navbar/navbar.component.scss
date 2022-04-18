@@ -6,46 +6,55 @@
     .navbar-brand {
         // color: $orang;
         cursor: pointer;
-        animation: moveIcon 4s infinite ease-in-out;
+        // animation: moveIcon 4s infinite ease-in-out;
         position: relative;
     }
     
-    @keyframes moveIcon {
-        0% {
-            left: -10%;
-            opacity: 0
-        }
-        80% {
-            left: 0;
-            opacity: 1
-        }
-        100% {
-            opacity: 0
-        }
+    .form-control {
+        width: auto !important;
     }
     
+    .login {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    // @keyframes moveIcon {
+    //     0% {
+    //         left: -10%;
+    //         opacity: 0
+    //     }
+    //     80% {
+    //         left: 0;
+    //         opacity: 1
+    //     }
+    //     100% {
+    //         opacity: 0
+    //     }
+    // }
     .logo {
-        width: 50px;
+        width: 100px;
     }
     
     // .navbar-brand:hover {
     //     color: $orang;
     // }
     .navbar-toggler :hover {
-        color: $orang;
+        // color: #0d6efd;
+        color: $lite-blue;
         transition: color .5s;
     }
     
     .navbar {
-        background-color: $lite-color !important;
-        z-index: 9999;
+        // background-color: $lite-color !important;
+        background-color: #000 !important;
+        z-index: 11111;
     }
     
-    .btn {
-        background-color: $orang;
-        color: $light;
-    }
-    
+    // .btn {
+    //     background-color: $orang;
+    //     color: $light;
+    // }
     .nav-link {
         color: $light !important;
         cursor: pointer;
@@ -53,22 +62,20 @@
     }
     
     .nav-link:hover {
-        color: $orang !important;
+        // color: #0d6efd !important;
+        color: $lite-blue !important;
+    }
+    
+    .dropdown-menu {
+        min-width: 5rem;
     }
     
     .active {
-        color: $orang !important;
+        // color: #0d6efd !important;
+        color: $lite-blue !important;
     }
     
-    @media screen and (max-width: 1060px)and (min-width: 992px) {
-        .collapse,
-        .btn {
-            font-size: 12px;
-        }
-    }
-    
-    @media screen and (max-width:992px) {
-        .btn {
-            font-size: 12px;
-        }
+    .btn {
+        color: $light;
+        background-color: $lite-blue !important;
     }

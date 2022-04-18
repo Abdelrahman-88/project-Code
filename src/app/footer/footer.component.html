@@ -1,14 +1,23 @@
 <section>
-    <footer class="py-5">
+    <footer [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div>
                         <!-- <h3 class="fw-bold">C9</h3> -->
                         <a class="navbar-brand"><img class="logo" src="assets/imgs/logo1-removebg-preview.png" alt="logo"></a>
+                        <img class="logo1" src="assets/imgs/c9-logo-removebg-preview.png" alt="logo">
+                        <!-- <p *ngIf="language==='EN'" class="mt-2">Let's create the brands for your business ?</p>
+                        <p *ngIf="language==='AR'" class="mt-2">لنقم بإنشاء العلامات التجارية لعملك؟</p> -->
+                        <!-- <p *ngIf="language==='EN'"><i class="fa-solid fa-location-dot me-2 fa-fw"></i>Al yasmeen, Riyadh, Kingdom of Saudi Arabia</p>
+                        <p *ngIf="language==='AR'"><i class="fa-solid fa-location-dot ms-2 fa-fw"></i>الياسمين، الرياض، المملكة العربية السعودية</p>
+                        <p *ngIf="language==='EN'"><i class="fa-solid fa-phone me-2 fa-fw"></i>920009710</p>
+                        <p *ngIf="language==='AR'"><i class="fa-solid fa-phone ms-2 fa-fw"></i>920009710</p>
+                        <p *ngIf="language==='EN'"><i class="fa-solid fa-earth-asia me-2 fa-fw"></i>info@9cloud.com.sa</p>
+                        <p *ngIf="language==='AR'"><i class="fa-solid fa-earth-asia ms-2 fa-fw"></i>info@9cloud.com.sa</p> -->
 
-                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                        <div class="d-flex my-2">
+
+                        <div class="d-flex mb-3">
                             <div class="bord">
                                 <a><i class="fa-brands fa-facebook-f fa-fw"></i></a>
                             </div>
@@ -30,48 +39,78 @@
                 <div class="col-md-9">
                     <div class="d-flex justify-content-evenly">
                         <div>
-                            <h5>Qucik Link
-                            </h5>
-                            <a class="nav-link fw-bold active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
+                            <h4 *ngIf="language==='EN'">Qucik Links</h4>
+                            <h4 *ngIf="language==='AR'">روابط سريعة</h4>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">About</a>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold active" aria-current="page" (click)="scrollToElement('#home',$event)">الرئيسيه</a>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">Token Sale</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">About</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">معرفتنا</a>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#service',$event)">Service</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">Why Us</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">لماذا نحن</a>
 
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#service',$event)">Service</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#service',$event)">الخدمات</a>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">Partners</a>
+                                </div>
+                                <div>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#contact',$event)">Contact</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#contact',$event)">اتصل بنا</a>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">Clients</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">العملاء</a>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold" (click)="scrollToElement('#blog',$event)">Blog</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold" (click)="scrollToElement('#blog',$event)">المدونة</a></div>
+                            </div>
 
                         </div>
+
                         <div>
-                            <h5>Company
-                            </h5>
-                            <a class="nav-link fw-bold active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
+                            <h4 *ngIf="language==='EN'">Categories</h4>
+                            <h4 *ngIf="language==='AR'">الاقسام</h4>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">About</a>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Marketing</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">التسويق</a>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">Token Sale</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Ads</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">الإعلانات</a>
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#service',$event)">Service</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Media Production</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">الإنتاج الإعلامي</a>
 
-
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">Partners</a>
-
-                        </div>
-                        <div>
-                            <h5>Categories
-                            </h5>
-                            <a class="nav-link fw-bold active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
-
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#about',$event)">About</a>
-
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#token',$event)">Token Sale</a>
-
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#service',$event)">Service</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Branding</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">العلامات التجارية</a>
 
 
-                            <a class="nav-link fw-bold" (click)="scrollToElement('#partners',$event)">Partners</a>
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Printed</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">مطبوعة</a>
+
+                                </div>
+                                <div>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Design</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">التصميم</a>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Event</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">حدث</a>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Technology</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">التقنيه</a>
+
+                                    <a *ngIf="language==='EN'" class="nav-link fw-bold">Business Development</a>
+                                    <a *ngIf="language==='AR'" class="nav-link fw-bold">تطوير الاعمال</a>
+
+
+
+                                </div>
+                            </div>
 
                         </div>
                     </div>

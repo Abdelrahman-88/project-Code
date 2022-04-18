@@ -1,0 +1,21 @@
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5 my-5">
+    <div class="container">
+        <h2 *ngIf="language==='EN'" class="my-5">Be special customer</h2>
+        <h2 *ngIf="language==='AR'" class="my-5">كن عميلاً مميزاً</h2>
+
+        <ul class="p-0 fs-4">
+            <li *ngIf="language==='EN'">The permanent customer in all fields or in the field that suits his needs by subscribing to the annual packages.</li>
+            <li *ngIf="language==='AR'">العميل الدائم بجميع المجالات او بالمجال الذي يتناسب مع احتاجاته باشتراك الباقات السنوية.</li>
+            <li *ngIf="language==='EN'">Free support and advice</li>
+            <li *ngIf="language==='AR'">الدعم والاستشارات مجانا.</li>
+            <li *ngIf="language==='EN'">Discounts and special offers.</li>
+            <li *ngIf="language==='AR'">خصم وعروض خاصة.</li>
+            <li *ngIf="language==='EN'">Flexibility with advance payments.</li>
+            <li *ngIf="language==='AR'">المرونة بالدفعات المقدمة.</li>
+            <li *ngIf="language==='EN'">Free multi demo model</li>
+            <li *ngIf="language==='AR'">نموذج تجريبي متعدد مجانا.</li>
+        </ul>
+        <a (click)="click()" *ngIf="language==='EN'" class="btn btn-outline-primary" type="button">Order Now</a>
+        <a (click)="click()" *ngIf="language==='AR'" class="btn btn-outline-primary" type="button">اطلب الان</a>
+    </div>
+</section>

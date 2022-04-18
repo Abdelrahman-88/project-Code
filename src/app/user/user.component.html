@@ -1,0 +1,23 @@
+<div [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5 text-white mt-5 container">
+    <div class="px-md-5 py-5">
+        <h2 *ngIf="language==='EN'" class="my-3">Profile details</h2>
+        <h2 *ngIf="language==='AR'" class="my-3">تفاصيل الملف الشخصي</h2>
+
+        <ul *ngIf="language==='EN'" class="list-unstyled p-0">
+            <li class="my-2"><i class="icon fas fa-id-card me-2 fa-fw"></i><span class="fw-bolder">Name :</span> {{userData.name}} <i type="button" (click)="updateProfile()" class="fas fa-edit ms-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-id-badge me-2 fa-fw"></i><span class="fw-bolder">Position :</span> {{userData.position}} <i type="button" (click)="updateProfile()" class="fas fa-edit ms-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-building me-2 fa-fw"></i><span class="fw-bolder">Company :</span> {{userData.companyName}} <i type="button" (click)="updateProfile()" class="fas fa-edit ms-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-envelope me-2 fa-fw"></i><span class="fw-bolder">Email :</span> {{userData.email}} <i type="button" (click)="updateProfile()" class="fas fa-edit ms-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-key me-2 fa-fw"></i><span class="fw-bolder">Password :</span> **************** <i type="button" (click)="updatePassword()" class="fas fa-edit ms-2 fa-fw"></i></li>
+        </ul>
+
+        <ul *ngIf="language==='AR'" class="list-unstyled p-0">
+            <li class="my-2"><i class="icon fas fa-id-card ms-2 fa-fw"></i><span class="fw-bolder">الاسم :</span> {{userData.name}} <i type="button" (click)="updateProfile()" class="fas fa-edit me-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-id-badge ms-2 fa-fw"></i><span class="fw-bolder">المنصب :</span> {{userData.position}} <i type="button" (click)="updateProfile()" class="fas fa-edit me-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-building ms-2 fa-fw"></i><span class="fw-bolder">الشركه :</span> {{userData.companyName}} <i type="button" (click)="updateProfile()" class="fas fa-edit me-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-envelope ms-2 fa-fw"></i><span class="fw-bolder">البريد الالكترونى :</span> {{userData.email}} <i type="button" (click)="updateProfile()" class="fas fa-edit me-2 fa-fw"></i></li>
+            <li class="my-2"><i class="icon fas fa-key ms-2 fa-fw"></i><span class="fw-bolder">كلمه المرور :</span> **************** <i type="button" (click)="updatePassword()" class="fas fa-edit me-2 fa-fw"></i></li>
+        </ul>
+    </div>
+
+</div>

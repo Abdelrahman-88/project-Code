@@ -1,0 +1,99 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#2f86e7" type="ball-scale-multiple"></ngx-spinner>
+
+<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+
+<div [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="d-flex justify-content-center mt-5 container">
+    <div class="my-5 w-75 update">
+        <h1 *ngIf="language==='EN'" class="my-3 text-primary">
+            Update profile
+        </h1>
+        <h1 *ngIf="language==='AR'" class="my-3 text-primary">
+            تحديث الملف
+        </h1>
+
+        <form [formGroup]="updateProfileForm" (ngSubmit)="submitUpdateProfileForm(updateProfileForm)">
+            <div *ngIf="language==='EN'" class="form-floating mb-3">
+                <input [ngClass]="{'is-valid': updateProfileForm.get('name')?.errors==null && updateProfileForm.get('name')?.value!=null}" formControlName="name" type="text" class="form-control text-primary border-primary bg-transparent" id="name" placeholder="Name">
+                <label class="text-primary" for="name">Name</label>
+                <div *ngIf="updateProfileForm.get('name')?.errors!=null && updateProfileForm.get('name')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['required']">Name is required</p>
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['minlength']">Name minlength is 3</p>
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['maxlength']">Name maxlength is 30</p>
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['pattern']">Letters only available</p>
+                </div>
+            </div>
+            <div *ngIf="language==='AR'" class="form-floating mb-3">
+                <input [ngClass]="{'validr': updateProfileForm.get('name')?.errors==null}" formControlName="name" type="text" class="form-control text-primary border-primary bg-transparent" id="name" placeholder="Name">
+                <label class="text-primary right" for="name">الاسم</label>
+                <div *ngIf="updateProfileForm.get('name')?.errors!=null && updateProfileForm.get('name')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['required']">يجب ادخال الاسم</p>
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['minlength']">يجب الا يقل الاسم عن ثلاث احرف</p>
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['maxlength']">يجب الا يزيد الاسم عن ثلاثون حرف</p>
+                    <p *ngIf="updateProfileForm.get('name')?.errors?.['pattern']">الحروف فقط متاحه</p>
+                </div>
+            </div>
+            <div *ngIf="language==='EN'" class="form-floating mb-3">
+                <input [ngClass]="{'is-valid': updateProfileForm.get('companyName')?.errors==null}" formControlName="companyName" type="text" class="form-control text-primary border-primary bg-transparent" id="company" placeholder="Company name">
+                <label class="text-primary" for="Company">Company name</label>
+                <div *ngIf="updateProfileForm.get('companyName')?.errors!=null && updateProfileForm.get('companyName')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['required']">Company name is required</p>
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['minlength']">Company name minlength is 3</p>
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['maxlength']">Company name maxlength is 30</p>
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['pattern']">Letters only available</p>
+                </div>
+            </div>
+
+            <div *ngIf="language==='AR'" class="form-floating mb-3">
+                <input [ngClass]="{'validr': updateProfileForm.get('companyName')?.errors==null}" formControlName="companyName" type="text" class="form-control text-primary border-primary bg-transparent" id="company" placeholder="Company name">
+                <label class="text-primary right" for="company">اسم الشركة</label>
+                <div *ngIf="updateProfileForm.get('companyName')?.errors!=null && updateProfileForm.get('companyName')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['required']">يجب ادخال اسم الشركة</p>
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['minlength']">يجب الا يقل اسم الشركة عن ثلاث احرف</p>
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['maxlength']">يجب الا يزيد اسم الشركة عن ثلاثون حرف</p>
+                    <p *ngIf="updateProfileForm.get('companyName')?.errors?.['pattern']">الحروف فقط متاحه</p>
+                </div>
+            </div>
+            <div *ngIf="language==='EN'" class="form-floating mb-3">
+                <input [ngClass]="{'is-valid': updateProfileForm.get('position')?.errors==null}" formControlName="position" type="text" class="form-control text-primary border-primary bg-transparent" id="position" placeholder="Position">
+                <label class="text-primary" for="position">Position</label>
+                <div *ngIf="updateProfileForm.get('position')?.errors!=null && updateProfileForm.get('position')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['required']">Position is required</p>
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['minlength']">Position minlength is 3</p>
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['maxlength']">Position maxlength is 30</p>
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['pattern']">Letters only available</p>
+                </div>
+            </div>
+
+            <div *ngIf="language==='AR'" class="form-floating mb-3">
+                <input [ngClass]="{'validr': updateProfileForm.get('position')?.errors==null}" formControlName="position" type="text" class="form-control text-primary border-primary bg-transparent" id="position" placeholder="Position">
+                <label class="text-primary right" for="position">المنصب</label>
+                <div *ngIf="updateProfileForm.get('position')?.errors!=null && updateProfileForm.get('position')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['required']">يجب ادخال المنصب</p>
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['minlength']">يجب الا يقل المنصب عن ثلاث احرف</p>
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['maxlength']">يجب الا يزيدالمنصب عن ثلاثون حرف</p>
+                    <p *ngIf="updateProfileForm.get('position')?.errors?.['pattern']">الحروف فقط متاحه</p>
+                </div>
+            </div>
+            <div *ngIf="language==='EN'" class="form-floating mb-3">
+                <input [ngClass]="{'is-valid': updateProfileForm.get('email')?.errors==null}" formControlName="email" type="email" class="form-control text-primary border-primary bg-transparent" id="email" placeholder="name@example.com">
+                <label class="text-primary" for="email">Email</label>
+                <div *ngIf="updateProfileForm.get('email')?.errors!=null && updateProfileForm.get('email')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('email')?.errors?.['required']">Email is required</p>
+                    <p *ngIf="updateProfileForm.get('email')?.errors?.['email']">Email should be such as example@domain.com</p>
+                </div>
+            </div>
+            <div *ngIf="language==='AR'" class="form-floating mb-3">
+                <input [ngClass]="{'validr': updateProfileForm.get('email')?.errors==null}" formControlName="email" type="email" class="form-control text-primary border-primary bg-transparent" id="email" placeholder="name@example.com">
+                <label class="text-primary right" for="email">البريد الالكترونى</label>
+                <div *ngIf="updateProfileForm.get('email')?.errors!=null && updateProfileForm.get('email')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                    <p *ngIf="updateProfileForm.get('email')?.errors?.['required']">يجب ادخال البريد الالكترونى</p>
+                    <p *ngIf="updateProfileForm.get('email')?.errors?.['email']">يجب ان يكون البريد الالكترونى مثل example@domain.com</p>
+                </div>
+            </div>
+            <button *ngIf="language==='EN'" [disabled]="updateProfileForm.invalid" type="submit" class="btn btn-outline-primary">Update</button>
+            <a *ngIf="language==='EN'" (click)="cancle()" class="btn btn-outline-danger ms-3">Cancle</a>
+            <button *ngIf="language==='AR'" [disabled]="updateProfileForm.invalid" type="submit" class="btn btn-outline-primary">تحديث</button>
+            <a *ngIf="language==='AR'" (click)="cancle()" class="btn btn-outline-danger me-3">إلغاء</a>
+        </form>
+    </div>
+</div>

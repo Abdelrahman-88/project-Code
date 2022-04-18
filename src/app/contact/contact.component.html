@@ -1,0 +1,68 @@
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="position-relative">
+    <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+
+    <!-- <h4 *ngIf="language==='EN'" class="service position-relative ps-2 text-center">Contact</h4>
+    <h4 *ngIf="language==='AR'" class="service position-relative ps-2 text-center">اتصل بنا</h4> -->
+    <div class="container">
+        <div class="back position-relative">
+            <!-- <img class="layer1" src="assets/imgs/Group 98.png" alt="">
+
+            <img class="layer2" src="assets/imgs/Group 98.png" alt=""> -->
+
+            <div class="row m-auto">
+                <div class="col-lg px-0">
+                    <a href='tel:+966599997909'>
+                        <div class="item p-3">
+                            <div class="pt-3">
+                                <div class="text-center"><i class="fa-solid fa-mobile-screen fs-1"></i></div>
+                                <p class="text-center fw-bolder mb-0 mt-4 fs-4">+966599997909</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg px-0">
+                    <a href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D9%A9+%D8%B3%D8%AD%D8%A8+%D9%84%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82+%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A+%7C+9cloud+Digital+marketing%E2%80%AD/@24.7627139,46.6974529,17z/data=!3m1!4b1!4m5!3m4!1s0x3e2efd75139c9f3b:0x1017c149a3318116!8m2!3d24.7627139!4d46.6996416"
+                        target="_blank">
+                        <div class="item p-3">
+                            <div class="pt-3">
+                                <div class="text-center"><i class="fa-solid fa-map-location-dot fs-1"></i></div>
+                                <p *ngIf="language==='EN'" class="text-center fw-bolder mb-0 mt-4 fs-4">Map</p>
+                                <p *ngIf="language==='AR'" class="text-center fw-bolder mb-0 mt-4 fs-4">الخريطة</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg px-0">
+                    <div class="item p-3">
+                        <div class="pt-3">
+                            <div class="text-center"><i class="fa-solid fa-at fs-1"></i></div>
+                            <p class="text-center fw-bolder mb-0 mt-4 fs-4">info@9cloud.com.sa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg px-0">
+                    <div class="item p-3">
+                        <div class="pt-3">
+                            <div class="text-center"><i class="fa-solid fa-map fs-1"></i></div>
+                            <p *ngIf="language==='EN'" class="text-center fw-bolder mb-0 mt-4 fs-4">Al-Nuzha Imam Saud Road</p>
+                            <p *ngIf="language==='AR'" class="text-center fw-bolder mb-0 mt-4 fs-4">النزهة طريق الامام سعود</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg px-0">
+                    <a href='tel:920009710'>
+                        <div class="item p-3">
+                            <div class="pt-3">
+                                <div class="text-center"><i class="fa-solid fa-headset fs-1"></i></div>
+                                <p class="text-center fw-bolder mb-0 mt-4 fs-4">920009710</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

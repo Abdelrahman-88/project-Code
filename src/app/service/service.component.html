@@ -1,98 +1,124 @@
-<section class="py-5 m-5">
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="py-5 my-5">
     <div class="container">
         <div class="position-relative">
-            <small class="service position-relative ps-2">SERVICE</small>
-            <p class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+            <h4 *ngIf="language==='EN'" class="service position-relative ps-2">SERVICE</h4>
+            <h4 *ngIf="language==='AR'" class="service position-relative ps-2">الخدمات</h4>
+
+            <!-- <p class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p> -->
             <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
         </div>
         <div class="row my-5">
-            <div class="col-xl-4">
+            <div class="col-lg-4">
                 <div class="d-flex my-3">
-                    <div class="icon p-2 fs-4 me-3"><i class="fa-solid fa-microchip fa-fw"></i></div>
+                    <div *ngIf="language==='EN'" class="icon p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-money-bill-trend-up fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-money-bill-trend-up fa-fw"></i></div>
 
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Means</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Marketing</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">التسويق</h4>
+                        <!-- <p *ngIf="language==='EN'">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec.</p>
+                        <p *ngIf="language==='AR'">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستر.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
                     </div>
                 </div>
                 <div class="d-flex my-3">
-                    <div class="icon p-2 fs-4 me-3"><i class="fa-solid fa-cart-shopping fa-fw"></i></div>
+                    <div *ngIf="language==='EN'" class="icon p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-bullhorn fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-bullhorn fa-fw"></i></div>
 
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Shopping</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Ads</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">الإعلانات</h4>
+                        <!-- <p *ngIf="language==='EN'">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed.</p>
+                        <p *ngIf="language==='AR'">وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
                     </div>
                 </div>
-                <div class="d-flex my-3">
-                    <div class="icon before p-2 fs-4 me-3"><i class="fa-solid fa-chart-line fa-fw"></i>
-                    </div>
+                <div class="d-flex mt-3">
+                    <div *ngIf="language==='EN'" class="icon before p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-photo-film fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon before p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-photo-film fa-fw"></i></div>
 
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Investment</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="d-flex my-3">
-                    <div class="icon1 after p-2 fs-4 me-3"><i class="fa-solid fa-money-bill-transfer fa-fw"></i></div>
-
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Transaction</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
-                    </div>
-                </div>
-                <div class="d-flex my-3">
-                    <div class="icon1 p-2 fs-4 me-3"><i class="fa-solid fa-arrow-right-arrow-left fa-fw"></i></div>
-
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Exchange</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
-                    </div>
-                </div>
-                <div class="d-flex my-3">
-                    <div class="icon1 p-2 fs-4 me-3"><i class="fa-solid fa-bullhorn fa-fw"></i>
-                    </div>
-
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Marketing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Media Production</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">الإنتاج الإعلامي</h4>
+                        <!-- <p *ngIf="language==='EN'">In order to enhance your success and follow the perfect tracks, get the best ideas and strategies from our extensive experienced team.</p>
+                        <p *ngIf="language==='AR'">من أجل تعزيز نجاحك واتباع المسارات المثالية ، احصل على أفضل الأفكار والاستراتيجيات من فريقنا ذو الخبرة الواسعة.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-lg-4">
                 <div class="d-flex my-3">
-                    <div class="icon p-2 fs-4 me-3"><i class="fa-solid fa-hands-holding-circle fa-fw"></i></div>
+                    <div *ngIf="language==='EN'" class="icon1 after p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-hands-holding-circle fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon1 after p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-hands-holding-circle fa-fw"></i></div>
 
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Advertising</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Branding</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">العلامات التجارية</h4>
+                        <!-- <p *ngIf="language==='EN'">Digital Media is the superior interface for all parties, it is for this reason our experienced team must manage your platform with professionalism.</p>
+                        <p *ngIf="language==='AR'">الوسائط الرقمية هي الواجهة الفائقة لجميع الأطراف ، ولهذا السبب يجب على فريقنا المتمرس إدارة النظام الأساسي الخاص بك باحترافية.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
                     </div>
                 </div>
                 <div class="d-flex my-3">
-                    <div class="icon p-2 fs-4 me-3"><i class="fa-solid fa-bars-progress fa-fw"></i></div>
+                    <div *ngIf="language==='EN'" class="icon1 p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-print fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon1 p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-print fa-fw"></i></div>
 
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Management</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Printed</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">مطبوعة</h4>
+                        <!-- <p *ngIf="language==='EN'">We create a creative idea and combine it in an integrated artistic product that takes the project message to the furthest extent.</p>
+                        <p *ngIf="language==='AR'">نصنع فكرة إبداعية ودمجها في منتج فني متكامل يأخذ رسالة المشروع إلى أبعد مدى.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
+                    </div>
+                </div>
+                <div class="d-flex mt-3">
+                    <div *ngIf="language==='EN'" class="icon1 p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-cubes fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon1 p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-cubes fa-fw"></i></div>
+
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Design</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">التصميم</h4>
+                        <!-- <p *ngIf="language==='EN'">It is the success window in achieving the company’s goals to reach it’s destinations. Actually, there are three types of companies; The one that make things happen; And those who watch things happen.</p>
+                        <p *ngIf="language==='AR'">إنها نافذة النجاح في تحقيق أهداف الشركة للوصول إلى وجهاتها. في الواقع ، هناك ثلاثة أنواع من الشركات ؛ الشخص الذي يجعل الأشياء تحدث ؛ وأولئك الذين يشاهدون الأشياء تحدث.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex my-3">
+                    <div *ngIf="language==='EN'" class="icon p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-icons fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-icons fa-fw"></i></div>
+
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Event</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">حدث</h4>
+                        <!-- <p *ngIf="language==='EN'">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed.</p>
+                        <p *ngIf="language==='AR'">وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
                     </div>
                 </div>
                 <div class="d-flex my-3">
-                    <div class="icon before p-2 fs-4 me-3"><i class="fa-solid fa-object-group fa-fw"></i>
-                    </div>
+                    <div *ngIf="language==='EN'" class="icon p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-code fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-code fa-fw"></i></div>
 
-                    <div class="item p-3 shadow position-relative">
-                        <h4 class="fw-bold">Design</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed...</p>
-                        <i class="fas fa-arrow-circle-right"></i>
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Technology</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">التقنيه</h4>
+                        <!-- <p *ngIf="language==='EN'">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl praesent massa ullamcorper ultrices eu tortor lacus sed.</p>
+                        <p *ngIf="language==='AR'">وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
+                    </div>
+                </div>
+                <div class="d-flex my-3">
+                    <div *ngIf="language==='EN'" class="icon before p-2 fs-4 mx-xl-3 me-3"><i class="fa-solid fa-microchip fa-fw"></i></div>
+                    <div *ngIf="language==='AR'" class="icon before p-2 fs-4 mx-xl-3 ms-3"><i class="fa-solid fa-microchip fa-fw"></i></div>
+
+                    <div class="item p-3 shadow d-flex justify-content-center align-items-center">
+                        <h4 *ngIf="language==='EN'" class="fw-bold">Business Development</h4>
+                        <h4 *ngIf="language==='AR'" class="fw-bold">تطوير الاعمال</h4>
+                        <!-- <p *ngIf="language==='EN'">In 9-clouds we perform and create innovative designs that express and reflect your identity.</p>
+                        <p *ngIf="language==='AR'">في السحبات ٩، نقوم بتنفيذ وإنشاء تصميمات مبتكرة تعبر عن هويتك وتعكسها.</p>
+                        <i class="fas fa-arrow-circle-right"></i> -->
                     </div>
                 </div>
             </div>

@@ -1,75 +1,86 @@
-@import "../../styles.scss";
-section {
-    background-image: url('../../assets/imgs/digital-world-banner-background-remixed-from-public-domain-by-nasa\ 1.png');
-    background-position: center center;
-    background-size: cover;
-}
-
-.partner::after {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 1px;
-    background-color: $orang;
-    left: 50%;
-    top: -5px;
-    transform: translateX(-50%);
-}
-
-.partner::before {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 1px;
-    background-color: $orang;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-}
-
-// .vector {
-//     position: absolute;
-//     top: -20px;
-//     left: 50%;
-//     z-index: 1;
-//     transform: translateX(-50%);
-// }
-h3,
-.fas {
-    color: $pink;
-}
-
-.head {
-    max-width: 500px;
-    margin: auto;
-}
-
-// .item {
-//     border-radius: 8px;
-//     cursor: pointer;
-//     transition: transform .5s;
-// }
-// .item img {
-//     border-radius: 8px;
-//     height: 250px;
-// }
-// .item:hover {
-//     transform: scale(.9);
-// }
-// .icons {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     border-radius: 8px;
-// }
-// .bord {
-//     background-color: $light;
-//     margin: 5px;
-//     border-radius: 4px;
-//     transition: background-color .5s;
-//     border: none;
-// }
-// .fa-brands {
-//     color: $pink;
-// }
+    @import "../../styles.scss";
+    section {
+        background-image: url('../../assets/imgs/digital-world-banner-background-remixed-from-public-domain-by-nasa\ 1.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    h3 {
+        color: $lite-blue;
+    }
+    
+    .layer {
+        // background-image: url('../../assets/imgs/digital-world-banner-background-remixed-from-public-domain-by-nasa\ 2.png');
+        // background-position: center center;
+        // background-size: cover;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    
+    // .partner::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 80%;
+    //     height: 1px;
+    //     background-color: $orang;
+    //     left: 50%;
+    //     top: -5px;
+    //     transform: translateX(-50%);
+    // }
+    // .partner::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 80%;
+    //     height: 1px;
+    //     background-color: $orang;
+    //     left: 50%;
+    //     bottom: -5px;
+    //     transform: translateX(-50%);
+    // }
+    // .vector {
+    //     position: absolute;
+    //     top: -20px;
+    //     left: 50%;
+    //     z-index: 1;
+    //     transform: translateX(-50%);
+    // }
+    // .fas {
+    //     color: $pink;
+    // }
+    // .head {
+    //     max-width: 500px;
+    //     margin: auto;
+    // }
+    // .item {
+    //     border-radius: 8px;
+    //     cursor: pointer;
+    //     transition: transform .5s;
+    // }
+    // .item img {
+    //     border-radius: 8px;
+    //     height: 250px;
+    // }
+    // .item:hover {
+    //     transform: scale(.9);
+    // }
+    // .icons {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     border-radius: 8px;
+    // }
+    // .bord {
+    //     background-color: $light;
+    //     margin: 5px;
+    //     border-radius: 4px;
+    //     transition: background-color .5s;
+    //     border: none;
+    // }
+    // .fa-brands {
+    //     color: $pink;
+    // }

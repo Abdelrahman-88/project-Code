@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
+  show:Boolean=false;
+
+
+  constructor() {}
+  ngOnInit() {
+    this.show=true;
+  }
+  
 }

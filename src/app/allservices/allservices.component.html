@@ -1,0 +1,112 @@
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-2 p-0">
+                <div>
+                    <a (click)="click('marketing',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold active left">Marketing</a>
+                    <a (click)="click('marketing',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold activer right">التسويق</a>
+
+                    <a (click)="click('ads',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Ads</a>
+                    <a (click)="click('ads',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">الإعلانات</a>
+
+                    <a (click)="click('media',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Media Production</a>
+                    <a (click)="click('media',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">الإنتاج الإعلامي</a>
+
+                    <a (click)="click('branding',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Branding</a>
+                    <a (click)="click('branding',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">العلامات التجارية</a>
+
+
+                    <a (click)="click('printed',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Printed</a>
+                    <a (click)="click('printed',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">مطبوعة</a>
+
+                    <a (click)="click('design',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Design</a>
+                    <a (click)="click('design',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">التصميم</a>
+
+                    <a (click)="click('event',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Event</a>
+                    <a (click)="click('event',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">حدث</a>
+
+                    <a (click)="click('technology',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Technology</a>
+                    <a (click)="click('technology',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">التقنيه</a>
+
+                    <a (click)="click('business',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Business Development</a>
+                    <a (click)="click('business',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">تطوير الاعمال</a>
+                </div>
+            </div>
+
+            <div class="col-10 content py-3 shadow">
+                <div class="container">
+                    <div class="marketing item">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Marketing</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">التسويق</span></h2>
+
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora suscipit quia veniam minus beatae, debitis nam vel eos voluptate velit unde sequi odio? Enim eum similique officiis porro quasi vero molestias, atque expedita nisi,
+                            odit ullam iure fugit ducimus molestiae corporis. Nesciunt id praesentium iste numquam facilis, aspernatur omnis soluta.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="ads item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Ads</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">الإعلانات</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente molestias, at numquam, quae, fuga odio dolor sunt adipisci architecto aperiam cumque magni aliquid perspiciatis?</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="media item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Media Production</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">الإنتاج الإعلامي</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nisi eaque similique quaerat voluptate? Temporibus eius cumque tempora praesentium qui, esse natus necessitatibus repellendus? Vero placeat tempora nobis officia dolore
+                            expedita dolorem amet quia laudantium.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="branding item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Branding</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">العلامات التجارية</span></h2>
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore aut vel veritatis, repudiandae esse tempora et libero laudantium? Nulla, autem?</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="printed item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Printed</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">مطبوعة</span></h2>
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque molestiae cumque hic error, cupiditate consequuntur iusto cum exercitationem dicta tempora voluptate, ea nesciunt id necessitatibus velit in deleniti!</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="design item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Design</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">التصميم</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sed commodi libero qui enim in accusantium obcaecati debitis autem? Repudiandae totam reprehenderit alias! Tenetur ea quo nobis corporis ut, inventore error voluptas
+                            modi.
+                        </p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="event item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Event</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">حدث</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam sequi ipsa deleniti rem harum eos nesciunt delectus corrupti minus.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="technology item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Technology</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">التقنيه</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo et error, illo nobis quos alias. Impedit, modi provident.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="business item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Business Development</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">تطوير الاعمال</span></h2>
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente architecto ab pariatur voluptas molestiae modi laudantium ad possimus beatae fugiat, ex corrupti nesciunt quibusdam repellat aliquam. Modi itaque quam placeat labore
+                            aut distinctio.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+@import "../../styles.scss";
+.icon,
+h2 {
+    color: $lite-blue;
+}
+
+.fa-edit {
+    transition: color .5s;
+}
+
+.fa-edit:hover {
+    color: $lite-blue;
+}

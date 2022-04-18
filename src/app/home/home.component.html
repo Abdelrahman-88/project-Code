@@ -1,58 +1,482 @@
 <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
-<section>
+
+<section id="home">
+    <div class="container h-100">
+        <div class="d-flex align-items-center h-100 w-50">
+            <div class="content">
+                <p class="fs-2">Nine Cloud</p>
+
+                <h1 class="fw-bolder">INNOVATION</h1>
+                <p class="fs-5" *ngIf="language==='EN'">WE BELIEVE IN THE POWER OF CREATIVITY AND INNOVATIVE</p>
+                <p class="fs-5" *ngIf="language==='AR'">نحن نؤمن بقوة الإبداع والابتكار</p>
+
+                <button (click)="click()" *ngIf="language==='EN'" class="btn btn-info">Be special customer</button>
+                <button (click)="click()" *ngIf="language==='AR'" class="btn btn-info">كن عميلاً مميزاً</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="d-flex my-3 icons">
+
+        <div>
+            <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-fw fa-2xl"></i></a>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section id="home" [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="d-flex align-items-center mt-5">
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-2 p-0">
+                <div>
+                    <a (click)="click('marketing',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold active left">Marketing</a>
+                    <a (click)="click('marketing',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold activer right">التسويق</a>
+
+                    <a (click)="click('ads',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Ads</a>
+                    <a (click)="click('ads',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">الإعلانات</a>
+
+                    <a (click)="click('media',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Media Production</a>
+                    <a (click)="click('media',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">الإنتاج الإعلامي</a>
+
+                    <a (click)="click('branding',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Branding</a>
+                    <a (click)="click('branding',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">العلامات التجارية</a>
+
+
+                    <a (click)="click('printed',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Printed</a>
+                    <a (click)="click('printed',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">مطبوعة</a>
+
+                    <a (click)="click('design',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Design</a>
+                    <a (click)="click('design',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">التصميم</a>
+
+                    <a (click)="click('event',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Event</a>
+                    <a (click)="click('event',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">حدث</a>
+
+                    <a (click)="click('technology',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Technology</a>
+                    <a (click)="click('technology',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">التقنيه</a>
+
+                    <a (click)="click('business',$event,'left')" *ngIf="language==='EN'" class="nav-link fw-bold left">Business Development</a>
+                    <a (click)="click('business',$event,'right')" *ngIf="language==='AR'" class="nav-link fw-bold right">تطوير الاعمال</a>
+                </div>
+            </div>
+
+            <div class="col-10 content py-3 shadow">
+                <div class="container">
+                    <div class="row marketing item">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Marketing</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">التسويق</span></h2>
+                        <div class="p-3 col-md-4">
+                            <div class="bg-light shadow px-3 py-4 my-2 rounded-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h3 class="text-primary m-0">Offer</h3>
+                                    <div>
+                                        <a *ngIf="language==='EN'" class="btn btn-primary" type="submit">Order Now</a>
+                                        <a *ngIf="language==='AR'" class="btn btn-primary" type="submit">اطلب الان</a>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light shadow px-3 py-4 my-2 rounded-3">
+                                <h5 class="text-dark text-center mb-4 fw-bold">Top details</h5>
+                                <ul class="text-muted mb-4">
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <a *ngIf="language==='EN'" class="btn btn-primary" type="submit">Order Now</a>
+                                        <a *ngIf="language==='AR'" class="btn btn-primary" type="submit">اطلب الان</a>
+                                    </div>
+                                    <div>
+                                        <a *ngIf="language==='EN'" type="submit">Details...</a>
+                                        <a *ngIf="language==='AR'" type="submit">التفاصيل...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="p-3 col-md-4">
+                            <div class="bg-light shadow px-3 py-4 my-2 rounded-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h3 class="text-primary m-0">Offer</h3>
+                                    <div>
+                                        <a *ngIf="language==='EN'" class="btn btn-primary" type="submit">Order Now</a>
+                                        <a *ngIf="language==='AR'" class="btn btn-primary" type="submit">اطلب الان</a>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light shadow px-3 py-4 my-2 rounded-3">
+                                <h5 class="text-dark text-center mb-4 fw-bold">Top details</h5>
+                                <ul class="text-muted mb-4">
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <a *ngIf="language==='EN'" class="btn btn-primary" type="submit">Order Now</a>
+                                        <a *ngIf="language==='AR'" class="btn btn-primary" type="submit">اطلب الان</a>
+                                    </div>
+                                    <div>
+                                        <a *ngIf="language==='EN'" type="submit">Details...</a>
+                                        <a *ngIf="language==='AR'" type="submit">التفاصيل...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="p-3 col-md-4">
+                            <div class="bg-light shadow px-3 py-4 my-2 rounded-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h3 class="text-primary m-0">Offer</h3>
+                                    <div>
+                                        <a *ngIf="language==='EN'" class="btn btn-primary" type="submit">Order Now</a>
+                                        <a *ngIf="language==='AR'" class="btn btn-primary" type="submit">اطلب الان</a>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light shadow px-3 py-4 my-2 rounded-3">
+                                <h5 class="text-dark text-center mb-4 fw-bold">Top details</h5>
+                                <ul class="text-muted mb-4">
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <a *ngIf="language==='EN'" class="btn btn-primary" type="submit">Order Now</a>
+                                        <a *ngIf="language==='AR'" class="btn btn-primary" type="submit">اطلب الان</a>
+                                    </div>
+                                    <div>
+                                        <a *ngIf="language==='EN'" type="submit">Details...</a>
+                                        <a *ngIf="language==='AR'" type="submit">التفاصيل...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ads item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Ads</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">الإعلانات</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente molestias, at numquam, quae, fuga odio dolor sunt adipisci architecto aperiam cumque magni aliquid perspiciatis?</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="media item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Media Production</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">الإنتاج الإعلامي</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nisi eaque similique quaerat voluptate? Temporibus eius cumque tempora praesentium qui, esse natus necessitatibus repellendus? Vero placeat tempora nobis officia dolore
+                            expedita dolorem amet quia laudantium.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="branding item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Branding</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">العلامات التجارية</span></h2>
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore aut vel veritatis, repudiandae esse tempora et libero laudantium? Nulla, autem?</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="printed item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Printed</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">مطبوعة</span></h2>
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque molestiae cumque hic error, cupiditate consequuntur iusto cum exercitationem dicta tempora voluptate, ea nesciunt id necessitatibus velit in deleniti!</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="design item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Design</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">التصميم</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sed commodi libero qui enim in accusantium obcaecati debitis autem? Repudiandae totam reprehenderit alias! Tenetur ea quo nobis corporis ut, inventore error voluptas
+                            modi.
+                        </p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="event item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Event</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">حدث</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam sequi ipsa deleniti rem harum eos nesciunt delectus corrupti minus.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="technology item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Technology</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">التقنيه</span></h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo et error, illo nobis quos alias. Impedit, modi provident.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+                    <div class="business item fade">
+                        <h2 *ngIf="language==='EN'" class="my-3"><span class="position-relative">Business Development</span></h2>
+                        <h2 *ngIf="language==='AR'" class="my-3"><span class="position-relative">تطوير الاعمال</span></h2>
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente architecto ab pariatur voluptas molestiae modi laudantium ad possimus beatae fugiat, ex corrupti nesciunt quibusdam repellat aliquam. Modi itaque quam placeat labore
+                            aut distinctio.</p>
+                        <a *ngIf="language==='EN'" class="btn btn-outline-primary" type="submit">Order Now</a>
+                        <a *ngIf="language==='AR'" class="btn btn-outline-primary" type="submit">اطلب الان</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section id="home" [ngClass]="(language === 'EN' ? 'ltr':'rtl')">
 
     <div class="container py-5">
         <div class="row align-items-center justify-content-center">
-            <div class="col-md-6 py-5">
-                <h1 class="fw-bold">BUY AND SELL DIGITAL CURRENCY</h1>
-                <p>Trade crypto like it's meant to be</p>
-                <div class="position-relative">
+            <div class="col-md-6 pt-5 my-md-5"> -->
+<!-- <div class="center">
+                    <h1 *ngIf="language==='EN'" class="nine w-100 text-center">Nine Cloud</h1>
+                    <h1 *ngIf="language==='AR'" class="nine">تسع سحابات</h1>
+                    <img class="w-100 head" src="assets/imgs/new_project__10_.png" alt="">
+                    <img class="img-fluid" src="assets/imgs/new_project__9_.png" alt="">
 
-                    <div class="d-flex align-items-center item1">
-                        <img class="marketing me-2" src="assets/imgs/marketing.png" alt="marketing">
-                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam veniam perspiciatis quibusdam ab, et nam doloribus excepturi. Accusantium, itaque quam!</small>
+                </div> -->
+
+<!-- <div class="mt-3">
+                    <owl-carousel-o [options]="customOptions">
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div><img class="img-fluid click px-3" src="assets/imgs/degital.png" alt="degital"></div>
+                        </ng-template>
+
+
+                    </owl-carousel-o>
+                </div> -->
+<!-- <p *ngIf="language==='EN'" class="fs-1 fw-bold content text-uppercase">Integrated Development Environment</p>
+                <p *ngIf="language==='AR'" class="fs-1 fw-bold content">بيئة تطوير متكاملة</p> -->
+<!-- <div *ngIf="language==='EN'" class="position-relative">
+                    <div [@fade] [ngClass]="{'animation': item1 === true}" *ngIf="item1" class="item1 opacity-100">
+                        <div><img class="img-fluid click px-3" src="assets/imgs/22d04631-7989-4884-9f62-209fc178af9e.png" alt="degital"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/01b299bb-ab60-4dfc-9e0d-e0a01f6066de.png" alt="degital"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/4247bcea-1257-4b8c-9032-990b5a30b344.png" alt="degital"></div>
                     </div>
-                    <div class="d-flex align-items-center item2">
-                        <img class="media me-2" src="assets/imgs/media.png" alt="media">
-                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec. Dapibus nascetur amet lacinia et placerat nibh.</small>
+                    <div [@fade] [ngClass]="{'animation': item2 === true}" *ngIf="item2" class="item2">
+                        <div><img class="img-fluid click px-3" src="assets/imgs/01b299bb-ab60-4dfc-9e0d-e0a01f6066de.png" alt="Building"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/22d04631-7989-4884-9f62-209fc178af9e.png" alt="Building"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/3-removebg-preview.png" alt="Building"></div>
+
                     </div>
-                    <div class="d-flex align-items-center item3">
-                        <img class="cenima me-2" src="assets/imgs/cenima.png" alt="cenima">
-                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique iure consectetur. Deleniti aperiam placeat culpa odio numquam libero aliquid!</small>
+                    <div [@fade] [ngClass]="{'animation': item3 === true}" *ngIf="this.item3" class="item3">
+                        <div><img class="img-fluid click px-3" src="assets/imgs/3-removebg-preview.png" alt="events"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/4247bcea-1257-4b8c-9032-990b5a30b344.png" alt="events"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/01b299bb-ab60-4dfc-9e0d-e0a01f6066de.png" alt="events"></div>
+
                     </div>
-                    <div class="d-flex align-items-center item4">
-                        <img class="design me-2" src="assets/imgs/design.png" alt="design">
-                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec. Dapibus nascetur amet lacinia et placerat nibh.</small>
-                    </div>
-                    <div class="d-flex align-items-center item5">
-                        <img class="marketing me-2" src="assets/imgs/chair.png" alt="event">
-                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam veniam perspiciatis quibusdam ab, et nam doloribus excepturi. Accusantium, itaque quam!</small>
-                    </div>
-                    <div class="d-flex align-items-center item6">
-                        <img class="media me-2" src="assets/imgs/Marketing_perspective_matte.png" alt="printed">
-                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec. Dapibus nascetur amet lacinia et placerat nibh.</small>
-                    </div>
-                    <!-- <div class="d-flex align-items-center item7">
-                        <img class="cenima me-2" src="assets/imgs/Price_perspective_matte.png" alt="branding">
-                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique iure consectetur. Deleniti aperiam placeat culpa odio numquam libero aliquid!</small>
-                    </div>
-                    <div class="d-flex align-items-center item8">
-                        <img class="design me-2" src="assets/imgs/income.png" alt="adds">
-                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec. Dapibus nascetur amet lacinia et placerat nibh.</small>
-                    </div> -->
+
 
 
                 </div>
-                <!-- <div class="mt-4">
+                <div *ngIf="language==='AR'" class="position-relative">
+                    <div [@fade] [ngClass]="{'animation': item1 === true}" *ngIf="item1" class="item1r opacity-100">
+                        <div><img class="img-fluid click px-3" src="assets/imgs/22d04631-7989-4884-9f62-209fc178af9e.png" alt="degital"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/01b299bb-ab60-4dfc-9e0d-e0a01f6066de.png" alt="degital"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/4247bcea-1257-4b8c-9032-990b5a30b344.png" alt="degital"></div>
+                    </div>
+                    <div [@fade] [ngClass]="{'animation': item2 === true}" *ngIf="item2" class="item2r">
+                        <div><img class="img-fluid click px-3" src="assets/imgs/01b299bb-ab60-4dfc-9e0d-e0a01f6066de.png" alt="Building"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/22d04631-7989-4884-9f62-209fc178af9e.png" alt="Building"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/3-removebg-preview.png" alt="Building"></div>
+
+                    </div>
+                    <div [@fade] [ngClass]="{'animation': item3 === true}" *ngIf="this.item3" class="item3r">
+                        <div><img class="img-fluid click px-3" src="assets/imgs/3-removebg-preview.png" alt="events"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/4247bcea-1257-4b8c-9032-990b5a30b344.png" alt="events"></div>
+                        <div><img class="img-fluid click px-3" src="assets/imgs/01b299bb-ab60-4dfc-9e0d-e0a01f6066de.png" alt="events"></div>
+
+                    </div>
+
+
+
+                </div> -->
+<!--<div class="position-relative">
+                    <div [ngClass]="{'animation': item1 === true}" *ngIf="item1" class="item1 opacity-100">
+                        <p class="text-primary fw-bold fs-3 shadow">Build Marketing Plans</p>
+                        <div class="d-flex align-items-center">
+                            <img class="marketing me-2" src="assets/imgs/degital.png" alt="marketing">
+                            <small>It is the success window in achieving the company’s goals to reach it’s destinations. Actually, there are three types of companies; The one that make things happen; And those who watch things happen; And the ones who are amazed at what is happening! The marketing plan should make things happen.</small>
+                        </div>
+                    </div>
+                    <div [ngClass]="{'animation': item2 === true}" *ngIf="item2" class="item2">
+                        <p class="text-primary fw-bold fs-3 shadow">Advertising Campaigns</p>
+                        <div class="d-flex align-items-center">
+                            <img class="marketing me-2" src="assets/imgs/Advertising.png" alt="marketing">
+
+                            <small>We provide advertising campaign services with complete strategies. The role of advertising campaigns is to understand the mentality of the targeted group and to employ the needed tools for any service/product to reveal the most beautiful advertising display in order to spread brands or increasing sales.
+
+                            </small>
+                        </div>
+                    </div>
+                    <div [ngClass]="{'animation': item3 === true}" *ngIf="this.item3" class="item3">
+                        <p class="text-primary fw-bold fs-3 shadow">Brand Building</p>
+                        <div class="d-flex align-items-center">
+                            <img class="marketing me-2" src="assets/imgs/Brand-Building.png" alt="marketing">
+
+                            <small>It is the beginning of inception and the front that we can put in a good way by using our experiences and knowledge to give your company a unique identity. The designing team has extensive experience building or redefining your business with the best quality and creative results.
+                            </small> </div>
+                    </div>
+
+                    <div [ngClass]="{'animation': item4 === true}" *ngIf="this.item4" class="item4">
+                        <p class="text-primary fw-bold fs-3 shadow">Social Media Management</p>
+                        <div class="d-flex align-items-center">
+                            <img class="marketing me-2" src="assets/imgs/social-media.png" alt="marketing">
+
+                            <small>Digital Media is the superior interface for all parties, it is for this reason our experienced team must manage your platform with professionalism.
+                            </small> </div>
+                    </div>
+                    <div [ngClass]="{'animation': item5 === true}" *ngIf="this.item5" class="item5">
+                        <p class="text-primary fw-bold fs-3 shadow">Visual Production</p>
+                        <div class="d-flex align-items-center">
+                            <img class="visual me-2" src="assets/imgs/VisualProduction1.png" alt="Visual">
+
+                            <small>We create a creative idea and combine it in an integrated artistic product that takes the project message to the furthest extent.</small> </div>
+                    </div>
+                    <div [ngClass]="{'animation': item6 === true}" *ngIf="this.item6" class="item6">
+                        <p class="text-primary fw-bold fs-3 shadow">Creative Design</p>
+                        <div class="d-flex align-items-center">
+                            <img class="Creative me-2" src="assets/imgs/CreativeDesign.png" alt="Creative">
+
+                            <small>In 9-clouds we perform and create innovative designs that express and reflect your identity.</small> </div>
+                    </div>
+
+                    <div [ngClass]="{'animation': item7 === true}" *ngIf="this.item7" class="item7">
+                        <p class="text-primary fw-bold fs-3 shadow">Marketing Consultation</p>
+                        <div class="d-flex align-items-center">
+                            <img class="marketing me-2" src="assets/imgs/consulting.png" alt="marketing">
+
+                            <small>In order to enhance your success and follow the perfect tracks, get the best ideas and strategies from our extensive experienced team.</small> </div>
+                    </div>
+
+                    <div [ngClass]="{'animation': item8 === true}" *ngIf="this.item8" class="item8">
+                        <p class="text-primary fw-bold fs-3 shadow">Event</p>
+                        <div class="d-flex align-items-center">
+                            <img class="marketing me-2" src="assets/imgs/events.png" alt="events">
+
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec. Dapibus nascetur amet lacinia et placerat nibh.</small>
+                        </div>
+                    </div>
+
+                    <div [ngClass]="{'animation': item9 === true}" *ngIf="this.item9" class="item9">
+                        <p class="text-primary fw-bold fs-3 shadow">Technology</p>
+                        <div class="d-flex align-items-center">
+                            <img class="technology me-2" src="assets/imgs/Technology.png" alt="Technology">
+
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ipsum aliquet turpis elit elit natoque varius eget facilisi. Amet rhoncus sed nulla tristique aenean viverra urna nec. Dapibus nascetur amet lacinia et placerat nibh.</small>
+                        </div>
+                    </div>
+
+
+                </div>-->
+<!-- <div class="mt-4">
                     <a class="btn btn1 fw-bold">Get Started <i class="fas fa-angle-double-right"></i></a>
                     <a class="btn"><span><i class="fas fa-play-circle"></i></span> PRESENTATION</a>
                 </div> -->
-            </div>
-            <div class="col-md-6 ">
-                <div class="position-relative py-5">
-                    <!-- <img class="img-fluid" src="assets/imgs/Group 7957.png" alt="home"> -->
-                    <img class="img-fluid" src="assets/imgs/Groupnew.png" alt="home">
+<!-- </div>
 
+<div class="col-md-6 pt-5 my-md-5">
+    <div class="text-center"> -->
+<!-- <img class="img-fluid" src="assets/imgs/Group 7957.png" alt="home"> -->
+<!-- <img class="img-fluid" src="assets/imgs/Groupnew.png" alt="home">
                     <img class="icon1" src="assets/imgs/marketing.png" alt="marketing">
                     <img class="icon2" src="assets/imgs/design.png" alt="design">
                     <img class="icon3" src="assets/imgs/cenima.png" alt="cenima">
@@ -61,12 +485,27 @@
                     <img class="icon6" src="assets/imgs/Marketing_perspective_matte.png" alt="printed">
                     <img class="icon7" src="assets/imgs/Price_perspective_matte.png" alt="branding ">
                     <img class="icon8" src="assets/imgs/income.png" alt="adds">
-                    <img class="logo" src="assets/imgs/cloud.png" alt="logo">
+                    <img class="logo" src="assets/imgs/cloud.png" alt="logo"> -->
+<!-- <img class="icon8" src="assets/imgs/perspective_matte.png" alt="technology"> -->
+
+<!-- <img class="img-fluid head" src="assets/imgs/logo__2_.png" alt=""> -->
+<!-- <img class="img-fluid" src="../../assets/imgs/development.gif" alt=""> -->
+<!-- <img class="img-fluid" src="assets/imgs/giphy__2_.gif" alt=""> -->
+<!-- <img class="img-fluid" src="../../assets/imgs/res_360.gif" alt=""> -->
+<!-- <img class="img-fluid" src="../../assets/imgs/seo-2.gif" alt=""> -->
+
+<!-- <p class="word">INTEGRATED DEVELOPMENT ENVIRONMENT</p> -->
 
 
+<!-- </div>
+</div>
+</div>
+</div>
+</section> -->
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<app-about id="about"></app-about>
+<app-token id="token"></app-token>
+<app-service id="service"></app-service>
+<app-contact id="contact"></app-contact>
+<app-partners id="partners"></app-partners>
+<app-blog id="blog"></app-blog>

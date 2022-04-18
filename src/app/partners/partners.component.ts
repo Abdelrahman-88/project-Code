@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { TranslateService } from './../translate.service';
 
 @Component({
   selector: 'app-partners',
@@ -11,16 +12,18 @@ export class PartnersComponent implements OnInit {
   myParams: any = {};
   width: number = 100;
   height: number = 100;
+  language:string="EN";
 
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
     autoplay:true,
     autoplayHoverPause:true,
-    margin:20,
+    margin:0,
     touchDrag: true,
     pullDrag: true,
     dots: false,
+    rtl: true,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -39,9 +42,11 @@ export class PartnersComponent implements OnInit {
     },
     nav: true
   }
-  constructor() { }
+  constructor(private _TranslateService:TranslateService) { }
 
   ngOnInit(): void {
+    this._TranslateService.language.subscribe((res:any)=>{this.language=res})
+
     this.myStyle = {
       'position': 'absolute',
       'width': '100%',
@@ -63,7 +68,7 @@ export class PartnersComponent implements OnInit {
           }
         },
         "color": {
-          "value": "#b05f6d"
+          "value": "#2f86e7"
         },
         "shape": {
           "type": "circle",
@@ -103,7 +108,7 @@ export class PartnersComponent implements OnInit {
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#b05f6d",
+          "color": "#2f86e7",
           "opacity": 0.4,
           "width": 1
         },

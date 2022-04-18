@@ -1,7 +1,6 @@
-<app-navbar></app-navbar>
-<app-home id="home"></app-home>
-<app-about id="about"></app-about>
-<app-token id="token"></app-token>
-<app-service id="service"></app-service>
-<app-partners id="partners"></app-partners>
-<app-footer></app-footer>
+<div [ngClass]="(show ? 'show':'')" style="display:none">
+    <app-loading></app-loading>
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+    <app-footer id="footer"></app-footer>
+</div>

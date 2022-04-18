@@ -1,40 +1,107 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fw-bolder shadow fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fw-bolder shadow">
     <div class="container">
         <!-- <a class="navbar-brand fw-bold"><span>C9</span></a> -->
-        <a class="navbar-brand"><img class="logo" src="assets/imgs/logo1-removebg-preview.png" alt="logo"></a>
+        <a (click)="scrollToElement('#home',$event)" class="navbar-brand"><img class="logo" src="assets/imgs/logo1.png" alt="logo"></a>
 
         <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
       </button>
-        <div class="collapse navbar-collapse flex-grow-0 m-auto" id="navbarScroll">
-            <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item mx-xxl-3 mx-xl-1">
-                    <a class="nav-link active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
+        <div class="collapse navbar-collapse ms-auto flex-grow-0" id="navbarScroll">
+            <ul [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="navbar-nav my-2 my-lg-0 navbar-nav-scroll mx-xl-5" style="--bs-scroll-height: 100px;">
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
+                    <a *ngIf="language==='AR'" class="nav-link active" aria-current="page" (click)="scrollToElement('#home',$event)">الرئيسيه</a>
+
                 </li>
-                <li class="nav-item mx-xxl-3 mx-xl-1">
-                    <a class="nav-link" (click)="scrollToElement('#about',$event)">About</a>
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#about',$event)">About</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#about',$event)">معرفتنا</a>
                 </li>
-                <li class="nav-item mx-xxl-3 mx-xl-1">
-                    <a class="nav-link" (click)="scrollToElement('#token',$event)">Token Sale</a>
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#token',$event)">Why Us</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#token',$event)">لماذا نحن</a>
                 </li>
-                <li class="nav-item mx-xxl-3 mx-xl-1">
-                    <a class="nav-link" (click)="scrollToElement('#service',$event)">Service</a>
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#service',$event)">Service</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#service',$event)">الخدمات</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#contact',$event)">Contact</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#contact',$event)">اتصل بنا</a>
+
                 </li>
 
-                <li class="nav-item mx-xxl-3 mx-xl-1">
-                    <a class="nav-link" (click)="scrollToElement('#partners',$event)">Partners</a>
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#partners',$event)">Clients</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#partners',$event)">العملاء</a>
+
                 </li>
 
-                <li class="nav-item mx-xxl-3 mx-xl-1">
-                    <a class="nav-link" (click)="scrollToElement('#contact',$event)">Contact</a>
+
+
+                <li class="nav-item mx-3">
+                    <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#blog',$event)">Blog</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#blog',$event)">المدونة</a>
+
+                </li>
+
+                <li class="nav-item mx-3">
+                    <a (click)="switchLang(language)" class="nav-link">{{buttonLanguage}}</a>
                 </li>
 
 
 
             </ul>
             <div class="d-flex">
-                <a class="btn btn-outline-light ms-xxl-5 border-0" type="submit">Buy now</a>
+                <div *ngIf="!this.isLogin">
+                    <a *ngIf="language==='EN'" class="btn ms-3 border-0 login" type="submit" routerLink="login">logIn</a>
+                    <a *ngIf="language==='AR'" class="btn ms-3 border-0" type="submit" routerLink="login">تسجيل الدخول</a>
+                </div>
+
+                <div *ngIf="!this.isLogin">
+                    <a *ngIf="language==='EN'" class="btn ms-3 border-0" type="submit" routerLink="register">Register</a>
+                    <a *ngIf="language==='AR'" class="btn ms-3 border-0 register" type="submit" routerLink="register">سجل الان</a>
+                </div>
+                <ul class="navbar-nav my-2 mx-3">
+                    <li *ngIf="this.isLogin" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu user" aria-labelledby="navbarDropdown">
+                            <li *ngIf="language==='EN'"><a class="dropdown-item px-1" routerLink="user">User</a></li>
+                            <li *ngIf="language==='AR'"><a class="dropdown-item px-1" routerLink="user">المستخدم</a></li>
+
+                            <li *ngIf="language==='EN'"><a (click)="logOut()" class="dropdown-item px-1" routerLink="login">Logout</a></li>
+                            <li *ngIf="language==='AR'"><a (click)="logOut()" class="dropdown-item px-1" routerLink="login">تسجيل خروج</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <!-- <div>
+                    <a *ngIf="language==='EN'" class="btn ms-3 border-0" type="submit" routerLink="allservices">All Services</a>
+                    <a *ngIf="language==='AR'" class="btn ms-3 border-0 register" type="submit" routerLink="allservices">جميع الخدمات</a>
+                </div> -->
+
             </div>
+            <!-- <span class="form-inline mx-5">
+                <select 
+                    class="form-control btn-primary shadow-none" 
+                    #selectedLang 
+                    (change)="switchLang(selectedLang.value)">
+                  <option  *ngFor="let language of translate.getLangs()" 
+                    [value]="language"
+                    [selected]="language === translate.currentLang">
+                    {{ language }}
+                  </option>
+                </select>
+              </span> -->
+
+
+            <!-- <button (click)="switchLang(language)" class="btn btn-primary mx-3 border-0">{{buttonLanguage}}</button> -->
+
         </div>
+
     </div>
 </nav>

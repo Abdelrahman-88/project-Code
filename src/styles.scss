@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Rajdhani:wght@500&display=swap');
 $font:'Rajdhani',
 sans-serif;
 $orang:#EC4F48;
@@ -7,20 +7,30 @@ $pink:#d35ab7;
 $light:#EAEAEA;
 // $blue :#24292e;
 // $blue :#000000;
-$blue :#0b1018;
+// $blue :#0b1018;
+// $blue :#000022;
+$blue :#000;
 $lite-color:#020c1898;
+$lite-blue:#2f86e7;
 body {
     font-family: $font;
     color: $light;
     background-color: $blue;
-    ;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
 }
 
 :root {
     scroll-behavior: unset;
 }
 
-html,
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
 }

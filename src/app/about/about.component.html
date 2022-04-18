@@ -1,93 +1,76 @@
-<section class="py-5 my-5">
+<section class="py-5 my-5 position-relative">
+    <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
     <div class="container">
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center align-items-center">
 
-            <div class="col-md-6 position-relative">
+            <div [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="col-md-6 position-relative">
 
-                <div *ngIf="who">
+                <div class="item" *ngIf="who">
                     <div class="position-relative">
-                        <small class="about position-relative ps-2">ABOUt US</small>
+                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
+
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
-                    <h3>Who we are
-                    </h3>
-                    <h4 class="my-3 position-relative py-2">Lorem, ipsum dolor.</h4>
-                    <p class="position-relative pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
-                    <ul class="fa-ul ms-4">
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Lorem.</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Lorem, ipsum.
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Lorem, ipsum dolor.
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>ipsum dolor.</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Best Market Cap</li>
+                    <h3 *ngIf="language==='EN'" class="text-primary">Who we are</h3>
+                    <h3 *ngIf="language==='AR'" class="text-primary">من نحن</h3>
+                    <p *ngIf="language==='EN'" class="pb-2">An integrated development environment that includes nine specialized digital fields with expertise and high professionalism. We believe in new ideas, great challenges and ambitious clients. We soar above creativity, excellence in the
+                        digital world.</p>
+                    <p *ngIf="language==='AR'" class="pb-2">بيئة تطوير متكاملة تضم تسع مجالات رقمية متخصصة مع الخبرة والاحترافية العالية ، نؤمن بالأفكار الجديدة والتحديات الكبيرة والعملاء الطموحين فنحن نحلق فوق الابداع ، التميز في العالم الرقمي.</p>
 
-                    </ul>
                 </div>
-                <div *ngIf="vision">
+                <div class="item" *ngIf="vision">
                     <div class="position-relative">
-                        <small class="about position-relative ps-2">ABOUt US</small>
+                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
-                    <h3>Our Vision
-                    </h3>
-                    <h4 class="my-3 position-relative py-2">Choose from 30+ cryptocurrencies</h4>
-                    <p class="position-relative pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, repellat. Obcaecati quia, deleniti totam fugit voluptates nesciunt sapiente maxime voluptatum.</p>
-                    <ul class="fa-ul ms-4">
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>lorem</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>TRC20 Support
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Easy Mining
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>High Market</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Best Market Cap</li>
+                    <h3 *ngIf="language==='EN'" class="text-primary">Our Vision</h3>
+                    <h3 *ngIf="language==='AR'" class="text-primary">رؤيتنا</h3>
+                    <p *ngIf="language==='EN'" class="pb-2">To be a center for creativity and innovation to overcome the barriers of traditional ideas to rise to the nine clouds to achieve the success of our partners.</p>
+                    <p *ngIf="language==='AR'" class="pb-2">أن نكون مركزاً للإبداع و الابتكار لنتخطـى حواجز الأفكار التقليدية لنرقى بها الى تسع سحابات لتحقيق نجاح شركائنا.</p>
 
-                    </ul>
                 </div>
-                <div *ngIf="mission">
+                <div class="item" *ngIf="mission">
                     <div class="position-relative">
-                        <small class="about position-relative ps-2">ABOUt US</small>
+                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
-                    <h3>Our Mission
-                    </h3>
-                    <h4 class="my-3 position-relative py-2">Choose cryptocurrencies</h4>
-                    <p class="position-relative pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, error adipisci! Voluptatem, quisquam magnam modi ex, aspernatur voluptate itaque velit, sunt corrupti nostrum fugit. Non.</p>
-                    <ul class="fa-ul ms-4">
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Mining</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Support
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Mining
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Market</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Market Cap</li>
+                    <h3 *ngIf="language==='EN'" class="text-primary">Our Mission</h3>
+                    <h3 *ngIf="language==='AR'" class="text-primary">مهمتنا</h3>
 
-                    </ul>
+                    <p *ngIf="language==='EN'" class="pb-2">To have a clear imprint in the support and development of individuals, institutions and companies in the digital world and to be partners in success.</p>
+                    <p *ngIf="language==='AR'" class="pb-2">أن تكون لنا بصمة واضحة في دعم وتنمية الأفراد والمؤسسات والشركات في العالم الرقمي وأن نكون شركاء نجاح.</p>
+
                 </div>
-                <div *ngIf="value">
+                <div class="item" *ngIf="value">
                     <div class="position-relative">
-                        <small class="about position-relative ps-2">ABOUt US</small>
+                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
-                    <h3>Our Values
-                    </h3>
-                    <h4 class="my-3 position-relative py-2">Lorem, ipsum.</h4>
-                    <p class="position-relative pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laboriosam, architecto sapiente soluta asperiores voluptates quia quo distinctio corrupti dolorem amet ullam!</p>
-                    <ul class="fa-ul ms-4">
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Fast</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>TRC20
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Easy
-                        </li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>High</li>
-                        <li><span class="fa-li"><i class="fas fa-check-double"></i></span>Best Cap</li>
+                    <h3 *ngIf="language==='EN'" class="text-primary">Our Values</h3>
+                    <h3 *ngIf="language==='AR'" class="text-primary">قيمتنا</h3>
 
+                    <ul class="px-0">
+                        <li *ngIf="language==='EN'">Excellence: We are committed to excellence and go above and beyond in what we do with our employees, our customers and our community.</li>
+                        <li *ngIf="language==='AR'">التميز : نلتزم بالتميز ونصل إلى ما هو أبعد في ما نقوم به مع موظفينا لعملائنا و مجتمعنا.</li>
+
+                        <li *ngIf="language==='EN'">Efficient Execution: We put our clients first and more than that we are a company that their clients can count on because we deliver the results we promise.</li>
+                        <li *ngIf="language==='AR'">كفاءة التنفيذ : نضع عملائنا في المقام الأول والأكثر من ذلك نحن شركة يمكن لعملائها الاعتماد عليها لأننا نحقق النتائج التي نعد بها.</li>
+
+                        <li *ngIf="language==='EN'">Unity: We work together as a team in a positive spirit. We are always ready to support our partners by building relationships based on the unity of advanced creative thinking.</li>
+                        <li *ngIf="language==='AR'">الوحدة : نعمل معاً كفريق بروح إيجابية فنحن على استعداد دائم لدعم شركائنا من خلال بناء علاقات ترتكز على وحدة التفكير الإبداعي المتطور.</li>
+
+                        <li *ngIf="language==='EN'">Commitment: Time is one of our priorities towards achievement to achieve the aspirations and satisfaction of our customers.</li>
+                        <li *ngIf="language==='AR'">الالتزام : الوقت من أولوياتنا نحو الإنجاز لتحقيق تطلعات عملائنا ورضاهم.</li>
                     </ul>
                 </div>
 
             </div>
-            <div class="col-md-6 py-3">
+            <div class="col-md-6 py-3 control">
                 <!-- <div class="position-relative">
                     <img class="img-fluid" src="assets/imgs/Group 25.png" alt="about">
                     <img class="icon1" src="assets/imgs/marketing.png" alt="marketing">
@@ -98,34 +81,58 @@
                 </div> -->
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <div [ngClass]="{'click1': who === true}" (click)="change('who')" class="icon m-3 p-5 shadow">
-                        <div class="after position-relative pb-2"><i class="fa-solid fa-users fa-2xl"></i></div>
+                    <div *ngIf="language==='EN'" [ngClass]="{'click1': who}" (click)="click( 'who') " class="icon m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-users fa-2xl "></i></div>
                         <small>Who we are</small>
                         <div>
-                            <i class="fas fa-arrow-circle-right text-light"></i>
+                            <i class="fas fa-arrow-circle-right text-light "></i>
                         </div>
-
                     </div>
-                    <div [ngClass]="{'click2': vision === true}" (click)="change('vision')" class="icon m-3 p-5 shadow">
-                        <div class="after position-relative pb-2"><i class="fa-solid fa-eye fa-2xl"></i></div>
+                    <div *ngIf="language==='AR'" [ngClass]="{'click1': who}" (click)="click( 'who') " class="icon iconr1 m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-users fa-2xl "></i></div>
+                        <small>من نحن</small>
+                        <div>
+                            <i class="fas fa-arrow-circle-right text-light "></i>
+                        </div>
+                    </div>
+                    <div *ngIf="language==='EN'" [ngClass]="{'click2': vision}" (click)="click( 'vision') " class="icon m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-eye fa-2xl "></i></div>
                         <small>Our Vision</small>
                         <div>
-                            <i class="fas fa-arrow-circle-right text-light"></i> </div>
+                            <i class="fas fa-arrow-circle-right text-light "></i> </div>
+                    </div>
+                    <div *ngIf="language==='AR'" [ngClass]="{'click2': vision}" (click)="click( 'vision') " class="icon iconr1 m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-eye fa-2xl "></i></div>
+                        <small>رؤيتنا</small>
+                        <div>
+                            <i class="fas fa-arrow-circle-right text-light "></i> </div>
                     </div>
 
                 </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div [ngClass]="{'click3': mission === true}" (click)="change('mission')" class="icon m-3 p-5 shadow">
-                        <div class="after position-relative pb-2"><i class="fa-solid fa-road fa-2xl"></i></div>
+                <div class="d-flex justify-content-center align-items-center ">
+                    <div *ngIf="language==='EN'" [ngClass]="{'click3': mission}" (click)="click( 'mission') " class="icon m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-road fa-2xl "></i></div>
                         <small>Our Mission</small>
                         <div>
-                            <i class="fas fa-arrow-circle-right text-light"></i> </div>
+                            <i class="fas fa-arrow-circle-right text-light "></i> </div>
                     </div>
-                    <div [ngClass]="{'click4': value === true}" (click)="change('value')" class="icon m-3 p-5 shadow">
-                        <div class="after position-relative pb-2"><i class="fa-solid fa-money-bill-trend-up fa-2xl"></i></div>
+                    <div *ngIf="language==='AR'" [ngClass]="{'click3': mission}" (click)="click( 'mission') " class="icon iconr m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-road fa-2xl "></i></div>
+                        <small>مهمتنا</small>
+                        <div>
+                            <i class="fas fa-arrow-circle-right text-light "></i> </div>
+                    </div>
+                    <div *ngIf="language==='EN'" [ngClass]="{'click4': value}" (click)="click( 'value') " class="icon m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-money-bill-trend-up fa-2xl "></i></div>
                         <small>Our Values</small>
                         <div>
-                            <i class="fas fa-arrow-circle-right text-light"></i> </div>
+                            <i class="fas fa-arrow-circle-right text-light "></i> </div>
+                    </div>
+                    <div *ngIf="language==='AR'" [ngClass]="{'click4': value}" (click)="click( 'value') " class="icon iconr m-3 p-5 shadow ">
+                        <div class="after position-relative pb-2 "><i class="fa-solid fa-money-bill-trend-up fa-2xl "></i></div>
+                        <small>قيمتنا</small>
+                        <div>
+                            <i class="fas fa-arrow-circle-right text-light "></i> </div>
                     </div>
                 </div>
             </div>

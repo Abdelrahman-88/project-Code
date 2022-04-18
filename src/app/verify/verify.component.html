@@ -1,0 +1,38 @@
+<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height">
+</particles>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#2f86e7" type="ball-scale-multiple"></ngx-spinner>
+<section [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="my-5">
+
+    <div class="d-flex justify-content-center container">
+        <div class="my-5 w-75 verify">
+            <h1 *ngIf="language==='EN'" class="my-3 text-primary">Verify</h1>
+            <h1 *ngIf="language==='AR'" class="my-3 text-primary">تاكيد</h1>
+
+            <form [formGroup]="verifyForm" (ngSubmit)="submitVerifyForm(verifyForm)">
+                <div *ngIf="language==='EN'" class="form-floating mb-3">
+                    <input [ngClass]="{'is-valid': verifyForm.get('verificationKey')?.errors==null}" formControlName="verificationKey" type="text" class="form-control text-primary border-primary bg-transparent" id="verificationKey" placeholder="Verification Key">
+                    <label class="text-primary" for="verificationKey">Verification Key</label>
+                    <div *ngIf="verifyForm.get('verificationKey')?.errors!=null && verifyForm.get('verificationKey')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                        <p *ngIf="verifyForm.get('verificationKey')?.errors?.['required']">Verification Key is required</p>
+                    </div>
+                </div>
+
+                <div *ngIf="language==='AR'" class="form-floating mb-3">
+                    <input [ngClass]="{'validr': verifyForm.get('verificationKey')?.errors==null}" formControlName="verificationKey" type="text" class="form-control text-primary border-primary bg-transparent" id="verificationKey" placeholder="verificationKey">
+                    <label class="text-primary right" for="verificationKey">مفتاح التحقق</label>
+                    <div *ngIf="verifyForm.get('verificationKey')?.errors!=null && verifyForm.get('verificationKey')?.touched" class="alert alert-danger mt-2 fw-bolder bg-transparent border-danger">
+                        <p *ngIf="verifyForm.get('verificationKey')?.errors?.['required']">يجب ادخال مفتاح التحقق</p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <button *ngIf="language==='EN'" [disabled]="verifyForm.invalid" type="submit" class="btn btn-outline-primary">Verify</button>
+                    <button *ngIf="language==='AR'" [disabled]="verifyForm.invalid" type="submit" class="btn btn-outline-primary">تاكيد</button>
+                    <a (click)="submitResendKey()" *ngIf="language==='EN'" class="btn btn-outline-primary ms-3">Resend</a>
+                    <a (click)="submitResendKey()" *ngIf="language==='AR'" class="btn btn-outline-primary me-3">إعادة إرسال</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
