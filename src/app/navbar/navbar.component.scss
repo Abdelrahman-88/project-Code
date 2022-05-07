@@ -59,6 +59,11 @@
         color: $light !important;
         cursor: pointer;
         transition: color .5s;
+        white-space: nowrap;
+    }
+    
+    a {
+        white-space: nowrap;
     }
     
     .nav-link:hover {

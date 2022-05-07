@@ -50,11 +50,10 @@
         width: 50px;
     }
     
-    .logo1 {
-        display: block;
-        width: 150px;
-    }
-    
+    // .logo1 {
+    //     display: block;
+    //     width: 150px;
+    // }
     .logo2 {
         width: 25px;
     }
@@ -63,6 +62,10 @@
         cursor: pointer;
         color: $light;
         transition: color .5s;
+    }
+    
+    .space {
+        white-space: nowrap;
     }
     
     .nav-link:hover {

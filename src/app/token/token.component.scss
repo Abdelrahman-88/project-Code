@@ -22,6 +22,7 @@
                     
                     ul {
                         font-size: 20px;
+                        list-style: inside;
                     }
                     
                     // .vector {
@@ -114,3 +115,8 @@
                     //         width: 50px;
                     //     }
                     // }
+                    @media screen and (max-width:992px) {
+                        ul {
+                            font-size: 17px;
+                        }
+                    }

@@ -4,12 +4,12 @@
 
         <div class="row justify-content-center align-items-center">
 
-            <div [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="col-md-6 position-relative">
+            <div [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="col-md-6">
 
                 <div class="item" *ngIf="who">
-                    <div class="position-relative">
-                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
-                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
+                    <div>
+                        <h5 *ngIf="language==='EN'" class="about">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about">تعرف علينا</h5>
 
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
@@ -21,9 +21,9 @@
 
                 </div>
                 <div class="item" *ngIf="vision">
-                    <div class="position-relative">
-                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
-                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
+                    <div>
+                        <h5 *ngIf="language==='EN'" class="about">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about">تعرف علينا</h5>
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
                     <h3 *ngIf="language==='EN'" class="text-primary">Our Vision</h3>
@@ -33,9 +33,9 @@
 
                 </div>
                 <div class="item" *ngIf="mission">
-                    <div class="position-relative">
-                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
-                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
+                    <div>
+                        <h5 *ngIf="language==='EN'" class="about">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about">تعرف علينا</h5>
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
                     <h3 *ngIf="language==='EN'" class="text-primary">Our Mission</h3>
@@ -46,9 +46,9 @@
 
                 </div>
                 <div class="item" *ngIf="value">
-                    <div class="position-relative">
-                        <h5 *ngIf="language==='EN'" class="about position-relative">ABOUt US</h5>
-                        <h5 *ngIf="language==='AR'" class="about position-relative">تعرف علينا</h5>
+                    <div>
+                        <h5 *ngIf="language==='EN'" class="about">ABOUt US</h5>
+                        <h5 *ngIf="language==='AR'" class="about">تعرف علينا</h5>
                         <!-- <img class="img-fluid vector" src="assets/imgs/Vector.png" alt="Vector"> -->
                     </div>
                     <h3 *ngIf="language==='EN'" class="text-primary">Our Values</h3>
@@ -58,11 +58,11 @@
                         <li *ngIf="language==='EN'">Excellence: We are committed to excellence and go above and beyond in what we do with our employees, our customers and our community.</li>
                         <li *ngIf="language==='AR'">التميز : نلتزم بالتميز ونصل إلى ما هو أبعد في ما نقوم به مع موظفينا لعملائنا و مجتمعنا.</li>
 
-                        <li *ngIf="language==='EN'">Efficient Execution: We put our clients first and more than that we are a company that their clients can count on because we deliver the results we promise.</li>
+                        <!-- <li *ngIf="language==='EN'">Efficient Execution: We put our clients first and more than that we are a company that their clients can count on because we deliver the results we promise.</li>
                         <li *ngIf="language==='AR'">كفاءة التنفيذ : نضع عملائنا في المقام الأول والأكثر من ذلك نحن شركة يمكن لعملائها الاعتماد عليها لأننا نحقق النتائج التي نعد بها.</li>
 
                         <li *ngIf="language==='EN'">Unity: We work together as a team in a positive spirit. We are always ready to support our partners by building relationships based on the unity of advanced creative thinking.</li>
-                        <li *ngIf="language==='AR'">الوحدة : نعمل معاً كفريق بروح إيجابية فنحن على استعداد دائم لدعم شركائنا من خلال بناء علاقات ترتكز على وحدة التفكير الإبداعي المتطور.</li>
+                        <li *ngIf="language==='AR'">الوحدة : نعمل معاً كفريق بروح إيجابية فنحن على استعداد دائم لدعم شركائنا من خلال بناء علاقات ترتكز على وحدة التفكير الإبداعي المتطور.</li> -->
 
                         <li *ngIf="language==='EN'">Commitment: Time is one of our priorities towards achievement to achieve the aspirations and satisfaction of our customers.</li>
                         <li *ngIf="language==='AR'">الالتزام : الوقت من أولوياتنا نحو الإنجاز لتحقيق تطلعات عملائنا ورضاهم.</li>
