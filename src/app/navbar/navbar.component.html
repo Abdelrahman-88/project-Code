@@ -1,3 +1,4 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#2f86e7" type="ball-scale-multiple"></ngx-spinner>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fw-bolder shadow">
     <div class="container">
         <!-- <a class="navbar-brand fw-bold"><span>C9</span></a> -->
@@ -8,26 +9,26 @@
       </button>
         <div class="collapse navbar-collapse ms-auto flex-grow-0" id="navbarScroll">
             <ul [ngClass]="(language === 'EN' ? 'ltr':'rtl')" class="navbar-nav my-2 my-lg-0 navbar-nav-scroll mx-xl-5" style="--bs-scroll-height: 100px;">
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link active" aria-current="page" (click)="scrollToElement('#home',$event)">Home</a>
                     <a *ngIf="language==='AR'" class="nav-link active" aria-current="page" (click)="scrollToElement('#home',$event)">الرئيسيه</a>
 
                 </li>
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#about',$event)">About</a>
-                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#about',$event)">معرفتنا</a>
+                    <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#about',$event)">عنا</a>
                 </li>
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#token',$event)">Why Us</a>
                     <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#token',$event)">لماذا نحن</a>
                 </li>
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#service',$event)">Service</a>
                     <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#service',$event)">الخدمات</a>
                 </li>
 
 
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#partners',$event)">Clients</a>
                     <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#partners',$event)">العملاء</a>
 
@@ -35,18 +36,18 @@
 
 
 
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#blog',$event)">Blog</a>
                     <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#blog',$event)">المدونة</a>
 
                 </li>
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a *ngIf="language==='EN'" class="nav-link" (click)="scrollToElement('#contact',$event)">Contact</a>
                     <a *ngIf="language==='AR'" class="nav-link" (click)="scrollToElement('#contact',$event)">اتصل بنا</a>
 
                 </li>
 
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-2">
                     <a (click)="switchLang(language)" class="nav-link">{{buttonLanguage}}</a>
                 </li>
 

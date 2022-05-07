@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
   timer:any;
   language:string="EN";
 
-
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -81,6 +80,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     // this.translate.addLangs(['en', 'ar']);
     // this.translate.setDefaultLang('en');
     this._TranslateService.language.subscribe((res:any)=>{this.language=res})

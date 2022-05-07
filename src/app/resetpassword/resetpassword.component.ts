@@ -191,11 +191,19 @@ export class ResetpasswordComponent implements OnInit {
         },
         error: (error) => {
           this.spinner.hide();
-          this.error = error.error.message;
-          this.toastr.error(`${this.error}!`, '', {
+          if (error.error.message=="UNAUTHORIZED") {
+          this.toastr.error(`Unauthorized or invalid key!`, '', {
             positionClass: 'toast-bottom-right',
             timeOut: 5000,
           });
+          } else {
+            this.error = error.error.message;
+            this.toastr.error(`${this.error}!`, '', {
+              positionClass: 'toast-bottom-right',
+              timeOut: 5000,
+            }); 
+          }
+          
         },
       });
     } else {

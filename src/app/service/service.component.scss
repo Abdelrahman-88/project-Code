@@ -23,6 +23,12 @@ section {
     max-width: 500px;
 }
 
+a {
+    text-decoration: none;
+    color: $light;
+    width: 100%;
+}
+
 .item {
     // background-color: #302461 !important;
     background-color: rgba(255, 255, 255, 0.123);
