@@ -8,8 +8,7 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  Url ='https://cloud9project.herokuapp.com/'
-  // Url ='http://localhost:3000/'
+  Url ='http://localhost:3000/'
 
   userData = new BehaviorSubject(null);
   userId = new BehaviorSubject(null);
